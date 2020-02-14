@@ -7,7 +7,9 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 export const sortBackwards = (arr) => {
-  // Solution code here...
+    const sortedArray = arr.sort(function(a, b) {return a - b;});
+    const reversedArray = sortedArray.reverse();
+    return reversedArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +23,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetize = (arr) => {
-  // Solution code here...
+    const newArray = arr.sort();
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +34,11 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByLength = (arr) => {
-  // Solution code here...
+    const newArray = arr.sort(function(a, b) {
+        return a.length - b.length;
+    });
+    
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +50,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetizeBetter = (arr) => {
-  // Solution code here...
+    const newArray = arr.sort(function(a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +70,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByPrice = (arr) => {
-  // Solution code here...
+    arr.sort((a, b) => {
+        return a.price - b.price;
+    });
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +85,12 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 export const sortNumbersByLength = (arr) => {
-  // Solution code here...
+    const newArray = arr.sort(function(a, b) {
+        if(a.toString().length === b.toString().length) {
+            return '';
+        } return a.toString().length - b.toString().length;
+    });  
+    return newArray;
 };
 
 /*-----------------------------------------------------------------------------------------------
