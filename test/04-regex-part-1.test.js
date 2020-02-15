@@ -38,7 +38,7 @@ test('It should return false if the input does not contain a number', assert => 
     assert.notOk(isNum(''));
 });
 
-skip('It should only return words that begin with a capital letter', assert => {
+test('It should only return words that begin with a capital letter', assert => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
     assert.deepEqual(capitalResult, ['We', 'Return', 'Words', 'With', 'Letter']);
@@ -48,12 +48,12 @@ skip('It should only return words that begin with a capital letter', assert => {
         ['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']
     );
 
-    assert.deepEqual(isCapitalized('these words are all failures'), []);
+    assert.deepEqual(isCapitalized('these words are all failures'), null);
 });
 
 const cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 
-skip('It should return the cities whose names begin with the letters A through J', assert => {
+test('It should return the cities whose names begin with the letters A through J', assert => {
     assert.deepEqual(citiesAtoJ(cities).sort(), ['Austin', 'Birmingham', 'Boston', 'Cleveland', 'Hoboken']);
     assert.deepEqual(citiesAtoJ([]), []);
     assert.deepEqual(
@@ -62,7 +62,7 @@ skip('It should return the cities whose names begin with the letters A through J
     );
 });
 
-skip('It should not return the cities whose names begin with the letters K through Z', assert => {
+test('It should not return the cities whose names begin with the letters K through Z', assert => {
     const kToZCities = ['San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach'];
     citiesAtoJ(cities).forEach(city => {
         assert.notOk(kToZCities.includes(city));

@@ -29,7 +29,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 export const isCapitalized = (str) => {
-  // Solution code here...
+    let regex = /[A-Z]\w*/g;
+    return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,7 +40,17 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 export const citiesAtoJ = (arr) => {
-  // Solution code here...
+    let validator = /^[A-J]\w*/g;
+    arr.forEach((item) => {
+        validator.test(item);
+
+        if(validator.test(item) === false) {
+            arr.pop(item);
+        } else {
+            return false;
+        }
+    });
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
