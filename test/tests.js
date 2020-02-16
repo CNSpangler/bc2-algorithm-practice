@@ -1,5 +1,4 @@
-
-import './04-split-join-slice-splice.test.js';
+import './07-map.test.js';
 
 const test = QUnit.test;
 
