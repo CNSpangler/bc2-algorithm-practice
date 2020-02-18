@@ -1,4 +1,4 @@
-import './07-map.test.js';
+import './04-filter.test.js';
 
 const test = QUnit.test;
 
