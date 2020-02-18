@@ -11,7 +11,13 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 export const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+    let newArr = [];  
+    for(let i = 0; i < arr.length; i++) {
+        const num = arr[i];
+        const newNum = Math.pow(2, num);
+        newArr.push(newNum);
+    }
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +27,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 export const forEachTwoToThe = (arr) => {
-  // Solution code here...
+    let newArr = [];
+    arr.forEach((item) => {
+        const newNum = Math.pow(2, item);
+        newArr.push(newNum);
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,7 +42,12 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 export const mapTwoToThe = (arr) => {
-  // Solution code here...
+    const newArr = [];  
+    arr.map(num => {
+        const newNum = Math.pow(2, num);
+        newArr.push(newNum);
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +61,12 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 export const charCode = (arr) => {
-  // Solution code here...
+    const newArr = [];
+    arr.map(char => {
+        const item = char.charCodeAt();
+        newArr.push(item);
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +80,17 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 export const evenOdd = (arr) => {
-  // Solution code here...
+    const newArr = [];
+    arr.map(num => {
+        if(isNaN(num)) {
+            newArr.push('N/A');
+        } else if(num % 2 === 0) {
+            newArr.push('even');
+        } else {
+            newArr.push('odd');
+        } 
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,8 +104,15 @@ Note: Because this function is expecting the array of abilities, it will be invo
 extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
+// snorlaxAbilities.abilities[0].ability.name
+
 export const extractAbilities = (arr) => {
-  // Solution code here...
+    const newArr = [];
+    arr.map((name, index) => {
+        const abilityName = name[index].ability.name;
+        newArr.push(abilityName);
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +127,13 @@ The total should be the sum of the effort and the baseStat.
 Here is an example of a single array element: { name: 'speed', total: 35 }
 ------------------------------------------------------------------------------------------------ */
 
+
 export const extractStats = (arr) => {
-  // Solution code here...
+    let item;
+    arr.map(item, index => {
+        return {
+            name: item[index].stat.name,
+            total: item[index].effort + item[index].baseStat,
+        };
+    });
 };
