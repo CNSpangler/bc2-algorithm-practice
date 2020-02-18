@@ -104,12 +104,11 @@ Note: Because this function is expecting the array of abilities, it will be invo
 extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
-// snorlaxAbilities.abilities[0].ability.name
-
 export const extractAbilities = (arr) => {
     const newArr = [];
-    arr.map((name, index) => {
-        const abilityName = name[index].ability.name;
+    arr.map((thing) => {
+        console.log(thing.ability.name);
+        const abilityName = thing.ability.name;
         newArr.push(abilityName);
     });
     return newArr;
@@ -129,11 +128,13 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 
 
 export const extractStats = (arr) => {
-    let item;
-    arr.map(item, index => {
-        return {
-            name: item[index].stat.name,
-            total: item[index].effort + item[index].baseStat,
+    const newArr = [];
+    arr.map(item => {
+        const newItem = {
+            name: item.stat.name,
+            total: item.effort + item.baseStat,
         };
+        newArr.push(newItem);
     });
+    return newArr;
 };
