@@ -106,7 +106,7 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 export const evenOddNumericValues = (arr) => {
     const numArr = arr.filter(item => {
-        return isNaN(item) ? false : true;
+        return (typeof(item) === 'number') ? false : true;
     });
     
     return numArr.map(num => {
