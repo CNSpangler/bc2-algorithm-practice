@@ -9,11 +9,23 @@ Note: You might need to use the same method more than once.
 
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
+// export const count = (target, input) => {
+//     const masterArr = input.reduce(function(acc, curr) {
+//         acc.push(curr.values());
+//     }, []);
+//     return masterArr;
+// };
+
 export const count = (target, input) => {
-    const masterArr = input.reduce(function(acc, curr) {
-        acc.push(curr.values());
-    }, []);
-    return masterArr;
+    const arr = input.flat();
+
+    const result = arr.reduce(function(acc, curr) {
+        if(curr === target) {
+            acc++;  
+        }
+        return acc;
+    }, 0);
+    return result;
 };
 
 
