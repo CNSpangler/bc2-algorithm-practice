@@ -1,4 +1,4 @@
-import './06-object-iteration.test.js';
+import './10-chaining.test.js';
 
 const test = QUnit.test;
 
