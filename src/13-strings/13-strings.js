@@ -79,7 +79,13 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 export const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+    const newPhones = arr.map(phone => {
+        const removeOpenParen = phone.replace('(', '');
+        const removeCloseParen = removeOpenParen.replace(')', '');
+        const removeDash = removeCloseParen.replace('-', '');
+        return removeDash.replace(' ', '');
+    });
+    return newPhones;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,8 +97,19 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 export const onlyOddChars = (str) => {
-  // Solution code here...
+    const oddChars = [];
+    for(let i = 0; i < str.length; i++) {
+        console.log(str.indexOf(i));
+        if(str.indexOf(i) % 2 !== 0) {
+            oddChars.push(str.indexOf(i));
+        } else {
+            return;
+        }
+    }
 };
+
+
+//if(string.indexOf(i) % 2 === 0)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
