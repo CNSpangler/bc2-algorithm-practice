@@ -12,16 +12,77 @@ For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total co
 Return the array of the total number of cookies sold per hour for all of the stores combined.
 ------------------------------------------------------------------------------------------------ */
 
+// export const grandTotal = (stores) => {
+//     const newArr = [];
+//     for(let i = 0; i < stores.length; i++) {
+//         const store = stores[i];
+//         for(let j = 0; j < store.length; j++) {
+//             newArr.push(store[j]);
+//         }
+//         console.log('newArr', newArr);
+//     }
+// };
+
+// export const grandTotal = (stores) => {
+//   const newArr = [];
+//   for(let i = 0; i < stores.length; i++) {
+//       const store = stores[i];
+//         store.forEach(hour => {
+//           const hourArr = hour.splice(0);
+//           console.log(hourArr);
+//         })
+//   }
+// };
+
+// export const grandTotal = (stores) => {
+//     const result = [];
+//     stores.forEach(store => {
+//         const hour = store.splice(0, 1);
+//         console.log('hour', hour);
+//         const hourArr = [];
+//         hourArr.push(hour);
+//         console.log('hourArr', hourArr);
+//         result.push(hourArr);
+//     });
+//     console.log('result', result.flat());
+//     return result.flat();
+// };
+
+// export const grandTotal = (stores) => {
+//     const newArr = [];
+//     stores.forEach(store => {
+//         for(let i = 0; i < store.length; i++) {
+//             newArr.push(store.splice(i));
+//         }
+//         console.log(newArr);
+//         return newArr;
+//     });
+// };
+
 export const grandTotal = (stores) => {
-    const newArr = [];
-    for(let i = 0; i < stores.length; i++) {
-        const hour = stores[i];
-        console.log(hour);
-        for(let j = 0; j < stores.length; i++) {
-            console.log('');
+    const result = [];
+    stores.forEach(store => {
+        const hour = store.splice(0, 1);
+        for(let i = 0; i < store.length; i++) {
+            store.slice(0, 1);
+            
         }
-    }
+
+
+
+        console.log('hour', hour);
+        const hourArr = [];
+        hourArr.push(hour);
+        console.log('hourArr', hourArr);
+        result.push(hourArr);
+    });
+    console.log('result', result.flat());
+    return result.flat();
 };
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
