@@ -1,4 +1,4 @@
-import './12-nested-loops.test.js';
+import './13-strings.test.js';
 
 // import './13-strings.test.js';
 const test = QUnit.test;

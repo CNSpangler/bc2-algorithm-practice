@@ -9,8 +9,21 @@ Write a function named firstLetters that takes in an array of strings and return
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 'w', 'w', ':']
 ------------------------------------------------------------------------------------------------ */
 
+// export const firstLetters = (arr) => {
+//     const result = arr.map(string => {
+//         string.slice(0, 1);
+//     });
+//     console.log(result);
+//     return result;
+// };
+
 export const firstLetters = (arr) => {
-  // Solution code here...
+    const newArr = [];
+    arr.forEach(string => {
+        const letter = string.slice(0, 1);
+        newArr.push(letter);
+    });
+    return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
