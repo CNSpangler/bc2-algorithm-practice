@@ -34,9 +34,41 @@ Write a function named findHappiness that takes in an array of strings and retur
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
 
+// export const findHappiness = (arr) => {
+//     const happiness = arr.forEach(string => {
+//         if(string.includes(':)')) {
+//           return true;
+//         } else {
+//           return false;
+//         }
+//       );
+//     return happiness;
+// };
+
+// this one also works!
+// export const findHappiness = (arr) => {
+//     const happiness = [];
+//     arr.forEach(string => {
+//         if(string.includes(':)')) {
+//             happiness.push(string);
+//         } else {
+//             return false;
+//         }
+//     });
+//     return happiness;
+// };
+
 export const findHappiness = (arr) => {
-  // Solution code here...
+    const happiness = arr.filter(string => {
+        if(string.includes(':)')) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return happiness;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3

@@ -34,7 +34,7 @@ test('It should return the first letter of each element of the array', assert =>
     assert.deepEqual(firstLetters([]), []);
 });
 
-skip('It should return only the strings that contain smiley faces', assert => {
+test('It should return only the strings that contain smiley faces', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.deepEqual(findHappiness(words), ['apple (:)', ':)banana', 'cant:)aloupe']);
