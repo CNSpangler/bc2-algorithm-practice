@@ -95,18 +95,29 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
+// export const onlyOddChars = (str) => {
+//     let result;
+//     for(let i = 0; i < str.length; i++) {
+//       // console.log(str.indexOf(str[i]));
+//         console.log(str.indexOf(str[i]) % 2);
+//         if((str.indexOf(str[i]) % 2) !== 0) {
+//             const result = toString(str[i]);
+//         }
+//     }
+//     return result;
+// };
 
 export const onlyOddChars = (str) => {
-    const oddChars = [];
+    let result;
     for(let i = 0; i < str.length; i++) {
-        console.log(str.indexOf(i));
-        if(str.indexOf(i) % 2 !== 0) {
-            oddChars.push(str.indexOf(i));
-        } else {
-            return;
+        // console.log(str.indexOf(str[i]));
+        if((str.indexOf(str[i]) % 2) !== 0) {
+            result = str.slice(str.indexOf(str[i]), (str.indexOf(str[i + 1])));
         }
+        return result;
     }
 };
+
 
 
 //if(string.indexOf(i) % 2 === 0)
