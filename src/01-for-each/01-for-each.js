@@ -111,12 +111,20 @@ in removeOne directly into this anonymous function.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-    arr.forEach(function(element) {
-        if(element % 3 === 2) {
-            arr.pop();
-        }
-    });
-    return arr;
+
+
+
+
+
+
+
+    
+    // arr.forEach(function(element) {
+    //     if(element % 3 === 2) {
+    //         arr.pop();
+    //     }
+    // });
+    // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
