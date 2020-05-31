@@ -176,6 +176,20 @@ Iterate over the array of numbers using forEach to determine the output based on
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
+export const fizzBuzz = (arr) => {
+    let output = [];
+    arr.forEach(num => {
+        if((num % 3) === 0 && (num % 5) === 0) {
+            output.push('Fizz Buzz');
+        } else if((num % 3) === 0) {
+            output.push('Fizz');
+        } else if((num % 5) === 0) {
+            output.push('Buzz');
+        } else output.push(num);
+    });
+    return output;
+};
+
 // export const fizzBuzz = (arr) => {
     
 //     arr.forEach(number => {
@@ -186,18 +200,18 @@ Return the resulting output array.
 //     return newArray;
 // };
 
-export const fizzBuzz = (arr) => {
-    let newArray = [];
-    arr.forEach(number => {
-        if(number % 3 === 0 && number % 5 === 0) {
-            newArray.push('Fizz Buzz');
-        } else if(number % 3 === 0) {
-            newArray.push('Fizz');
-        } else if(number % 5 === 0) {
-            newArray.push('Buzz');
-        } else {
-            newArray.push(number);
-        }
-    });
-    return newArray;
-};
+// export const fizzBuzz = (arr) => {
+//     let newArray = [];
+//     arr.forEach(number => {
+//         if(number % 3 === 0 && number % 5 === 0) {
+//             newArray.push('Fizz Buzz');
+//         } else if(number % 3 === 0) {
+//             newArray.push('Fizz');
+//         } else if(number % 5 === 0) {
+//             newArray.push('Buzz');
+//         } else {
+//             newArray.push(number);
+//         }
+//     });
+//     return newArray;
+// };
