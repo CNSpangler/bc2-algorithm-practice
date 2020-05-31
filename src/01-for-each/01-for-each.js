@@ -8,14 +8,14 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
-export const greeting = (word) => {
-    const result = word.toUpperCase();
-    return result;
+export const greeting = (string) => {
+    return string.toUpperCase();
+    // const result = word.toUpperCase();
+    // return result;
 };
 
 export const speaker = (message, callback) => {
-    const result = callback(message);
-    return result;
+    return callback(message);
 };
 
 /* ------------------------------------------------------------------------------------------------

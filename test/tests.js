@@ -1,4 +1,4 @@
-import './14-review.test.js';
+import './01-for-each.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
