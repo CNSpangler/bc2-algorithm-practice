@@ -111,13 +111,11 @@ in removeOne directly into this anonymous function.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithAnon = (arr) => {
-
-
-
-
-
-
-
+    arr.forEach(num => {
+        if(num % 3 === 2) arr.pop();
+    });
+    return arr;
+};
     
     // arr.forEach(function(element) {
     //     if(element % 3 === 2) {
@@ -125,7 +123,7 @@ export const removeWithAnon = (arr) => {
     //     }
     // });
     // return arr;
-};
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6

@@ -11,7 +11,7 @@ import {
     fizzBuzz
 } from '../src/01-for-each/01-for-each.js';
 
-const { test } = QUnit;
+const { test, skip } = QUnit;
 
 QUnit.module('01 forEach');
 
