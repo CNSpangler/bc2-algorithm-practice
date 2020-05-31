@@ -39,8 +39,12 @@ export const addValues = (arr, value) => {
 };
 
 export const addNumbers = (num, arr, times, callback) => {
+    // const newArr = callback(arr, num)
+    //     .repeat(times);
+    // return newArr;
+
     for(let i = 0; i < times; i++) {
-        addValues(arr, num);
+        callback(arr, num);
     }
     return arr;
 };
@@ -65,11 +69,24 @@ export const removeOne = (num, arr) => {
 
 export const removeElements = (arr, callback) => {
     for(let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        callback(element, arr);
+        let num = arr[i];
+        callback(num, arr);
     }
     return arr;
+
+    // for(let i = 0; i < arr.length; i++) {
+    //     const num = arr[i];
+    //     callback(num, arr);
+    // }
+    // return arr;
 };
+
+    // for(let i = 0; i < arr.length; i++) {
+    //     const element = arr[i];
+    //     callback(element, arr);
+    // }
+    // return arr;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -78,9 +95,7 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 export const removeWithForEach = (arr, callback) => {
-    arr.forEach(element => {
-        callback(element, arr);
-    });
+    arr.forEach(element => callback(element, arr));
     return arr;
 };
 
