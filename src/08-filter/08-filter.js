@@ -12,10 +12,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 
 export const oddValues = (arr) => {
-    const odds = arr.filter(num => {
-        return (num % 2 === 0) ? false : true; 
-    });
-    return odds; 
+    return arr.filter(num => (num % 2 !== 0));
+    // const odds = arr.filter(num => {
+    //     return (num % 2 === 0) ? false : true; 
+    // });
+    // return odds; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,10 +30,11 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 ------------------------------------------------------------------------------------------------ */
 
 export const filterStringsWithVowels = (arr) => {
-    const vowelWords = arr.filter((string) => {
-        return string.match(/[aeiou]/gi);
-    });
-    return vowelWords;
+    return arr.filter(str => str.match(/[aeiou]/));
+    // const vowelWords = arr.filter((string) => {
+    //     return string.match(/[aeiou]/gi);
+    // });
+    // return vowelWords;
 };
 
 
@@ -45,10 +47,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 export const notInFirstArray = (forbiddenValues, arr) => {
-    const uniqueArr = arr.filter(item => {
-        return forbiddenValues.includes(item) ? false : true;
-    });
-    return uniqueArr;
+    // const uniqueArr = arr.filter(item => {
+    //     return forbiddenValues.includes(item) ? false : true;
+    // });
+    // return uniqueArr;
+
+    return arr.filter(val => forbiddenValues.includes(val) ? false : true);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,10 +64,12 @@ For example, getBaseStatGreaterThan(snorlaxData.stats, 50) will return an array 
 ------------------------------------------------------------------------------------------------ */
 
 export const getBaseStatGreaterThan = (arr, minBaseStat) => {
-    const stats = arr.filter(stat => {
-        return (stat.baseStat > minBaseStat) ? true : false;
-    });
-    return stats;
+    return arr.filter(stat => (stat.baseStat > minBaseStat) ? true : false);
+
+    // const stats = arr.filter(stat => {
+    //     return (stat.baseStat > minBaseStat) ? true : false;
+    // });
+    // return stats;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,12 +81,14 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 export const getStatName = (arr, minBaseStat) => {
-    const stats = arr.filter(stat => {
-        return (stat.baseStat > minBaseStat) ? true : false;
-    });
-    return stats.map(stat => {
-        return stat.stat.name;
-    });
+    return arr.filter(stat => (stat.baseStat > minBaseStat))
+        .map(stat => stat.stat.name);
+    // const stats = arr.filter(stat => {
+    //     return (stat.baseStat > minBaseStat) ? true : false;
+    // });
+    // return stats.map(stat => {
+    //     return stat.stat.name;
+    // });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,9 +99,10 @@ Write a function named getCharactersWithoutChildren that, given the array of cha
 
 
 export const getCharactersWithoutChildren = (arr) => {
-    return arr.filter(char => {
-        return (Object.keys(char).includes('children')) ? false : true;
-    });
+    return arr.filter(char => !char.children);
+    // return arr.filter(char => {
+    //     return (Object.keys(char).includes('children')) ? false : true;
+    // });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,15 +114,34 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 export const evenOddNumericValues = (arr) => {
-    const numArr = arr.filter(item => {
-        return (typeof(item) === 'number') ? false : true;
-    });
+    // filter out non-numeric values
+    // map to convert numbers to 'even' or 'odd'
+
+    return arr.filter(item => typeof(item) === 'number')
+        .map(item => (item % 2 === 0)
+            ? 'even'
+            : 'odd'
+        );
+
+
+
+
+
+
+
+
+
+
+
+    // const numArr = arr.filter(item => {
+    //     return (typeof(item) === 'number') ? false : true;
+    // });
     
-    return numArr.map(num => {
-        if(num % 2 === 0) {
-            return 'even';
-        } else {
-            return 'odd';
-        }
-    });
+    // return numArr.map(num => {
+    //     if(num % 2 === 0) {
+    //         return 'even';
+    //     } else {
+    //         return 'odd';
+    //     }
+    // });
 };
