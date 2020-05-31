@@ -144,12 +144,20 @@ This function should create another new array (the grocery list) and then use fo
 
 export const createList = (inventory) => {
     let list = [];
+
     inventory.forEach(item => {
-        if(item.available === true) {
-            list.push(item.name);
-        }
+        if(item.available) list.push(item.name);
     });
+
     return list;
+
+    // let list = [];
+    // inventory.forEach(item => {
+    //     if(item.available === true) {
+    //         list.push(item.name);
+    //     }
+    // });
+    // return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
