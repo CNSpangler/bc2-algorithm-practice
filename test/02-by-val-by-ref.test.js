@@ -39,7 +39,7 @@ test('It should append by modifying the original', (assert) => {
 });
 
 
-skip('It should add a property to an object', (assert) => {
+test('It should add a property to an object', (assert) => {
     const a = { fullName: 'Octavia Butler' };
     addBirthYearProperty(a, 1947);
 
