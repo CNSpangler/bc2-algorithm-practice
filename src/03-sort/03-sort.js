@@ -29,6 +29,12 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetize = (arr) => {
+    return arr.sort();
+
+
+
+
+
     // const newArray = arr.sort();
     // return newArray;
 };

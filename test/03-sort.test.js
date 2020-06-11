@@ -34,13 +34,13 @@ test('It should sort high-to-low the numbers in an array', assert => {
     assert.deepEqual(sortBackwards([1]), [1]);
 });
 
-skip('It should sort strings alphabetically', assert => {
+test('It should sort strings alphabetically', assert => {
     assert.deepEqual(alphabetize(['alphabet', 'Zebra', 'Alphabet', 'carrot']), ['Alphabet', 'Zebra', 'alphabet', 'carrot']);
     assert.deepEqual(alphabetize(['alphabet', 'Alphabet', 'carrot']), ['Alphabet', 'alphabet', 'carrot']);
     assert.deepEqual(alphabetize([]), []);
 });
 
-skip('It should sort strings by length', assert => {
+test('It should sort strings by length', assert => {
     const ans = sortByLength(['alphabet', 'zebra', 'elephants', 'carrot']);
     assert.deepEqual(ans, ['zebra', 'carrot', 'alphabet', 'elephants']);
     assert.deepEqual(sortByLength(['a', 'bc', '']), ['', 'a', 'bc']);
