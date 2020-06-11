@@ -7,9 +7,15 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 export const sortBackwards = (arr) => {
-    const sortedArray = arr.sort(function(a, b) {return a - b;});
-    const reversedArray = sortedArray.reverse();
-    return reversedArray;
+    return arr.sort(function compare(a, b) {return b - a;});
+
+    // function compare(a, b) {
+    //     return a - b;
+    // }
+
+    // const sortedArray = arr.sort(function(a, b) {return a - b;});
+    // const reversedArray = sortedArray.reverse();
+    // return reversedArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,8 +29,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetize = (arr) => {
-    const newArray = arr.sort();
-    return newArray;
+    // const newArray = arr.sort();
+    // return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,11 +40,11 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByLength = (arr) => {
-    const newArray = arr.sort(function(a, b) {
-        return a.length - b.length;
-    });
+    // const newArray = arr.sort(function(a, b) {
+    //     return a.length - b.length;
+    // });
     
-    return newArray;
+    // return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,10 +56,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetizeBetter = (arr) => {
-    const newArray = arr.sort(function(a, b) {
-        return a.toLowerCase().localeCompare(b.toLowerCase());
-    });
-    return newArray;
+    // const newArray = arr.sort(function(a, b) {
+    //     return a.toLowerCase().localeCompare(b.toLowerCase());
+    // });
+    // return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,10 +76,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByPrice = (arr) => {
-    arr.sort((a, b) => {
-        return a.price - b.price;
-    });
-    return arr;
+    // arr.sort((a, b) => {
+    //     return a.price - b.price;
+    // });
+    // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,12 +91,12 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 export const sortNumbersByLength = (arr) => {
-    const newArray = arr.sort(function(a, b) {
-        if(a.toString().length === b.toString().length) {
-            arr.sort;
-        } return a.toString().length - b.toString().length;
-    });  
-    return newArray;
+    // const newArray = arr.sort(function(a, b) {
+    //     if(a.toString().length === b.toString().length) {
+    //         arr.sort;
+    //     } return a.toString().length - b.toString().length;
+    // });  
+    // return newArray;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -100,19 +106,19 @@ Write a function named sortPeople that takes in an array of Person objects, each
 ------------------------------------------------------------------------------------------------ */
 
 export class Person {
-    constructor(firstName, lastName, age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
+    // constructor(firstName, lastName, age) {
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //     this.age = age;
+    // }
 }
 
 export const sortPeople = (arr) => {
-    const people = [{ Person }];
-    people.sort((a, b) => {
-        return a.lastName - b.lastName;
-    });
-    return people;
+    // const people = [{ Person }];
+    // people.sort((a, b) => {
+    //     return a.lastName - b.lastName;
+    // });
+    // return people;
 };
 
 /* ------------------------------------------------------------------------------------------------
