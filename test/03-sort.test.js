@@ -57,7 +57,7 @@ test('It should alphabetize without regard to capitalization', assert => {
     assert.deepEqual(result2.slice(2), ['carrot', 'Zebra']);
 });
 
-skip('It should sort items by their price', assert => {
+test('It should sort items by their price', assert => {
     assert.deepEqual(sortByPrice([
         { name: 'Sweatshirt', price: 45 },
         { name: 'Bookmark', price: 2.50 },

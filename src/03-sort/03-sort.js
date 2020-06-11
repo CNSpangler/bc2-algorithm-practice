@@ -82,6 +82,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByPrice = (arr) => {
+    return arr.sort((a, b) => {
+        return a.price - b.price;
+    });
+
     // arr.sort((a, b) => {
     //     return a.price - b.price;
     // });
