@@ -132,13 +132,6 @@ export const sortPeople = (arr) => {
         return a.lastName.localeCompare(b.lastName);
     });
 
-
-
-
-
-
-
-
     // const people = [{ Person }];
     // people.sort((a, b) => {
     //     return a.lastName - b.lastName;
@@ -157,5 +150,14 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 export const sortPeopleBetter = (arr) => {
-  // Solution code here...
+    return arr.sort((a, b) => {
+        if(a.lastName !== b.lastName) {
+            return a.lastName.localeCompare(b.lastName);
+        } else if(a.firstName !== b.firstName) {
+            return a.firstName.localeCompare(b.firstName);
+        } else {
+            return a.age - b.age;
+        }
+    });
+
 };
