@@ -64,6 +64,7 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 export const setStatusAsAuthor = (people) => {
+    people.map(person => person.isAuthor = true);
 };
 
 /* ------------------------------------------------------------------------------------------------
