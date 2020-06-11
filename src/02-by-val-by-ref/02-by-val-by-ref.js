@@ -7,10 +7,11 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-export const appendTheEnd = (str) => {
-    const newStr = str.slice();  
-    return newStr + ' The end.';
-};
+// export const appendTheEnd = (str) => {
+//     return str + ' The end.';
+// };
+
+export const appendTheEnd = (str) => str + ' The end.';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -26,8 +27,6 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 export const appendFirstToLast = (arr) => {
-    const first = arr[0];
-    arr.push(first);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +45,6 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 export const addBirthYearProperty = (obj, year) => {
-    obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,9 +61,6 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 export const setStatusAsAuthor = (people) => {
-    for(let i = 0; i < people.length; i++) {
-        people[i].isAuthor = true;
-    }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,10 +79,4 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 export const append = (arr1, arr2) => {
-    for(let i = 0; i < arr2.length; i++) {
-        const item = arr2[i];
-        arr1.push(item);
-    }
-  
-
 };
