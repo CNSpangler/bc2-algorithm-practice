@@ -71,11 +71,11 @@ test('It should sort items by their price', assert => {
     assert.deepEqual(sortByPrice([]), []);
 });
 
-skip('It should sort numbers by their length', assert => {
+test('It should sort numbers by their length', assert => {
     assert.deepEqual(sortNumbersByLength([10, 2.8, 1, -47.75]), [1, 10, 2.8, -47.75]);
     assert.deepEqual(sortNumbersByLength([100, 2.82, 1, -47.75]), [1, 100, 2.82, -47.75]);
     const sameLength = sortNumbersByLength([1, 2, 3]);
-    assert.equal(sameLength, 3);
+    assert.equal(sameLength.length, 3);
     assert.ok(sameLength.includes(1));
     assert.ok(sameLength.includes(2));
     assert.ok(sameLength.includes(3));
