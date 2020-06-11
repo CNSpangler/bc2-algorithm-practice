@@ -105,11 +105,6 @@ export const sortNumbersByLength = (arr) => {
         return a.toString().length - b.toString().length;
     });
 
-
-
-
-
-
     // const newArray = arr.sort(function(a, b) {
     //     if(a.toString().length === b.toString().length) {
     //         arr.sort;
@@ -125,14 +120,25 @@ Write a function named sortPeople that takes in an array of Person objects, each
 ------------------------------------------------------------------------------------------------ */
 
 export class Person {
-    // constructor(firstName, lastName, age) {
-    //     this.firstName = firstName;
-    //     this.lastName = lastName;
-    //     this.age = age;
-    // }
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 }
 
 export const sortPeople = (arr) => {
+    return arr.sort((a, b) => {
+        return a.lastName.localeCompare(b.lastName);
+    });
+
+
+
+
+
+
+
+
     // const people = [{ Person }];
     // people.sort((a, b) => {
     //     return a.lastName - b.lastName;
