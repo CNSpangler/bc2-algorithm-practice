@@ -44,13 +44,6 @@ Write a function named sortByLength that takes in an array of strings and return
 export const sortByLength = (arr) => {
     return arr.sort((a, b) => {return a.length - b.length;});
 
-
-
-
-
-
-
-
     // const newArray = arr.sort(function(a, b) {
     //     return a.length - b.length;
     // });
@@ -67,6 +60,8 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 export const alphabetizeBetter = (arr) => {
+    return arr.sort((a, b) => {return a.localeCompare(b);});
+
     // const newArray = arr.sort(function(a, b) {
     //     return a.toLowerCase().localeCompare(b.toLowerCase());
     // });
