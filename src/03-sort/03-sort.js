@@ -31,10 +31,6 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 export const alphabetize = (arr) => {
     return arr.sort();
 
-
-
-
-
     // const newArray = arr.sort();
     // return newArray;
 };
@@ -46,6 +42,15 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 export const sortByLength = (arr) => {
+    return arr.sort((a, b) => {return a.length - b.length;});
+
+
+
+
+
+
+
+
     // const newArray = arr.sort(function(a, b) {
     //     return a.length - b.length;
     // });
