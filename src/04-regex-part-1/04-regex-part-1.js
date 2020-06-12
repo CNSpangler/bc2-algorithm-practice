@@ -13,11 +13,14 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 export const isNum = (input) => {
-    let validator = /[0-9]/g;
-    validator.test(input);
-    if(validator.test(input) === true) {
-        return true;
-    }
+    const numbers = /[0-9]/g;
+    return (numbers.test(input)) ? true : false;
+
+    // let validator = /[0-9]/g;
+    // validator.test(input);
+    // if(validator.test(input) === true) {
+    //     return true;
+    // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,8 +32,16 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 export const isCapitalized = (str) => {
-    let regex = /[A-Z]\w*/g;
-    return str.match(regex);
+
+
+
+
+
+
+
+
+    // let regex = /[A-Z]\w*/g;
+    // return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,17 +51,29 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 export const citiesAtoJ = (arr) => {
-    let validator = /^[A-J]\w*/g;
-    arr.forEach((item) => {
-        validator.test(item);
 
-        if(validator.test(item) === false) {
-            arr.pop(item);
-        } else {
-            return false;
-        }
-    });
-    return arr;
+
+
+
+
+
+
+
+
+
+
+
+    // let validator = /^[A-J]\w*/g;
+    // arr.forEach((item) => {
+    //     validator.test(item);
+
+    //     if(validator.test(item) === false) {
+    //         arr.pop(item);
+    //     } else {
+    //         return false;
+    //     }
+    // });
+    // return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
