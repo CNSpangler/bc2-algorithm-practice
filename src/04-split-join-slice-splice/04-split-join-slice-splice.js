@@ -33,11 +33,13 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 export const wordsToCharList = (str) => {
-    let result;
+    return str.split('');
 
-    for(let i = 0; i <= str.length; i++) {
-        return str.split('');
-    }
+    // let result;
+
+    // for(let i = 0; i <= str.length; i++) {
+    //     return str.split('');
+    // }
 };
 
 

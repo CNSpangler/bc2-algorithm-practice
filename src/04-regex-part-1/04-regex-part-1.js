@@ -32,16 +32,17 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 export const isCapitalized = (str) => {
+    // let arr = str.split(' ');
+    // console.log(arr);
+    // const capitalized = /([A-Z])\w+/g;
 
+    // arr.map(str => {
+    //     if(capitalized.test(str)) arr.push(str);
+    // });
+    // return arr;
 
-
-
-
-
-
-
-    // let regex = /[A-Z]\w*/g;
-    // return str.match(regex);
+    let regex = /[A-Z]\w*/g;
+    return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,29 +52,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 export const citiesAtoJ = (arr) => {
+    // let regex = /^[A-J]\w*/g;
+    // return arr.match(regex);
 
-
-
-
-
-
-
-
-
-
-
-
-    // let validator = /^[A-J]\w*/g;
-    // arr.forEach((item) => {
-    //     validator.test(item);
-
-    //     if(validator.test(item) === false) {
-    //         arr.pop(item);
-    //     } else {
-    //         return false;
-    //     }
-    // });
-    // return arr;
+    let regex = /([A-J])\w+/g;
+    return arr.filter(item => item.match(regex));
+    // return arr.filter(item => {
+    //   item.match(regex);
+    // }
+    // );
 };
 
 /* ------------------------------------------------------------------------------------------------
