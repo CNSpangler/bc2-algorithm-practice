@@ -83,20 +83,36 @@ const recipe = {
 };
 
 export const listFoods = (recipe) => {
-    let result = [];
-    result.push(
-        recipe.ingredients[0].slice(15), recipe.ingredients[1].slice(9),
-        recipe.ingredients[2].slice(9),
-        recipe.ingredients[3].slice(9),
-        recipe.ingredients[4].slice(10),
-        recipe.ingredients[5].slice(8),
-        recipe.ingredients[6].slice(8),
-        recipe.ingredients[7].slice(8),
-        recipe.ingredients[8].slice(8),
-        recipe.ingredients[9].slice(10),
-        recipe.ingredients[10].slice(10),
-    );
+    let noNumArr = [];
+    const result = [];
+    recipe.ingredients.map(item => {
+        const target = item.indexOf(' ');
+        const noNumItem = item.slice(target + 1);
+        noNumArr.push(noNumItem);
+    });
+
+    noNumArr.map(item => {
+        const target = item.indexOf(' ');
+        const noMeasurement = item.slice(target + 1);
+        result.push(noMeasurement);
+    });
+    console.log('result', result);
     return result;
+
+    // let result = [];
+    // result.push(
+    //     recipe.ingredients[0].slice(15), recipe.ingredients[1].slice(9),
+    //     recipe.ingredients[2].slice(9),
+    //     recipe.ingredients[3].slice(9),
+    //     recipe.ingredients[4].slice(10),
+    //     recipe.ingredients[5].slice(8),
+    //     recipe.ingredients[6].slice(8),
+    //     recipe.ingredients[7].slice(8),
+    //     recipe.ingredients[8].slice(8),
+    //     recipe.ingredients[9].slice(10),
+    //     recipe.ingredients[10].slice(10),
+    // );
+    // return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,27 +124,27 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 export const splitFoods = (recipe) => {
-    let result = [];
+    // let result = [];
 
-    recipe.ingredients.forEach((ingredient) => {
-        const splitArray = ingredient.split(' ');
-        console.log('split array', splitArray);
-        const slicedArray = splitArray.slice(2);
-        console.log('sliced array', slicedArray);
+    // recipe.ingredients.forEach((ingredient) => {
+    //     const splitArray = ingredient.split(' ');
+    //     console.log('split array', splitArray);
+    //     const slicedArray = splitArray.slice(2);
+    //     console.log('sliced array', slicedArray);
         
-        if(slicedArray.length > 1) {
-            const joinedItem = slicedArray.join(' ');
-            console.log('joined item', joinedItem);
-            result.push(joinedItem);
-        } else {
-            result.push(slicedArray);
-        }
-    });
+    //     if(slicedArray.length > 1) {
+    //         const joinedItem = slicedArray.join(' ');
+    //         console.log('joined item', joinedItem);
+    //         result.push(joinedItem);
+    //     } else {
+    //         result.push(slicedArray);
+    //     }
+    // });
 
 
-    console.log('result', result);
+    // console.log('result', result);
 
-    return result;
+    // return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,9 +158,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 ------------------------------------------------------------------------------------------------ */
 
 export const stepActions = (recipe) => {
-    let result = [];
-    // Solution code here...
-    return result;
+    // let result = [];
+    // // Solution code here...
+    // return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -191,9 +207,9 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 ------------------------------------------------------------------------------------------------ */
 
 export const totalSumCSV = (str) => {
-    let total = 0;
-    // Solution code here...
-    return total;
+    // let total = 0;
+    // // Solution code here...
+    // return total;
 };
 
 
