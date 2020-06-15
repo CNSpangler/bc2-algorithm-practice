@@ -93,8 +93,8 @@ export const listFoods = (recipe) => {
 
     noNumArr.map(item => {
         const target = item.indexOf(' ');
-        const noMeasurement = item.slice(target + 1);
-        result.push(noMeasurement);
+        const ingredient = item.slice(target + 1);
+        result.push(ingredient);
     });
     console.log('result', result);
     return result;
