@@ -193,7 +193,7 @@ export const removeEvenValues = (arr) => {
 
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] % 2 === 0) {
-            arr.splice(i, 1);
+            arr.splice(i--, 1);
         }
     }
 };
@@ -289,22 +289,22 @@ export const extractVowels = (str) => {
             vowelHolder.push(letter);
         } else return;
     });
-    const vowels = vowelHolder.join('');
+    const vowels = vowelHolder.sort().join('');
     
     const consArr = str.split('');
-    consArr.forEach(letter => {
-        if(letter === 'a') {
-            consArr.splice(consArr.indexOf(letter), 1);
-        } else if(letter === 'e') {
-            consArr.splice(consArr.indexOf(letter), 1);
-        } else if(letter === 'i') {
-            consArr.splice(consArr.indexOf(letter), 1);
-        } else if(letter === 'o') {
-            consArr.splice(consArr.indexOf(letter), 1);
-        } else if(letter === 'u') {
-            consArr.splice(consArr.indexOf(letter), 1);
+    for(let i = consArr.length - 1; i > 0; i--) {
+        if(consArr[i] === 'a') {
+            consArr.splice(i, 1);
+        } else if(consArr[i] === 'e') {
+            consArr.splice(i, 1);
+        } else if(consArr[i] === 'i') {
+            consArr.splice(i, 1);
+        } else if(consArr[i] === 'o') {
+            consArr.splice(i, 1);
+        } else if(consArr[i] === 'u') {
+            consArr.splice(i, 1);
         }
-    });
+    }
     const consonants = consArr.join('');
 
     return [consonants, vowels];
