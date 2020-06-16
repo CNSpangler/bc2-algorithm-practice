@@ -246,7 +246,22 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 export const removeVowels = (str) => {
-    // Solution code here...
+    const arr = str.split('');
+    console.log(arr);
+    arr.forEach(letter => {
+        if(letter === 'a') {
+            arr.splice(arr.indexOf(letter), 1);
+        } else if(letter === 'e') {
+            arr.splice(arr.indexOf(letter), 1);
+        } else if(letter === 'i') {
+            arr.splice(arr.indexOf(letter), 1);
+        } else if(letter === 'o') {
+            arr.splice(arr.indexOf(letter), 1);
+        } else if(letter === 'u') {
+            arr.splice(arr.indexOf(letter), 1);
+        }
+    });
+    return arr.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
