@@ -96,7 +96,6 @@ export const listFoods = (recipe) => {
         const ingredient = item.slice(target + 1);
         result.push(ingredient);
     });
-    console.log('result', result);
     return result;
 
     // let result = [];
@@ -124,6 +123,16 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 export const splitFoods = (recipe) => {
+    const result = [];
+
+    recipe.ingredients.map(item => {
+        const splitItem = item.split(' ');
+        const end = splitItem.length;
+        const final = splitItem.slice(2, end).join(' ');
+        result.push(final);
+    });
+    return result;
+
     // let result = [];
 
     // recipe.ingredients.forEach((ingredient) => {
@@ -158,9 +167,7 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 ------------------------------------------------------------------------------------------------ */
 
 export const stepActions = (recipe) => {
-    // let result = [];
-    // // Solution code here...
-    // return result;
+    return recipe.steps.map(item => item.split(' ')[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
