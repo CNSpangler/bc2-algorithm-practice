@@ -95,9 +95,9 @@ test('It should remove the even numbers from the array', assert => {
     removeEvenValues(list);
     assert.deepEqual(list, [1, 3, 5]);
 
-    list = [6, 3, 19, 43, 12, 66, 43];
+    list = [666, 3, 19, 43, 12, 43, 45, 66];
     removeEvenValues(list);
-    assert.deepEqual(list, [3, 19, 43, 43]);
+    assert.deepEqual(list, [3, 19, 43, 43, 45]);
 });
 
 

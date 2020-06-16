@@ -178,18 +178,24 @@ Write a function named removeEvenValues that, given an array of integers as inpu
 The array should be modified in-place.
 
 For example:
-  const integers = [1, 2, 3, 4, 5, 6];
-  removeEvenValues(integers);
-  console.log(integers) will print [1, 3, 5]
+    const integers = [1, 2, 3, 4, 5, 6];
+    removeEvenValues(integers);
+    console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
 
 export const removeEvenValues = (arr) => {
-    return arr.map(num => {
-        if(num % 2 === 0) {
-            console.log(arr.indexOf(num));
-            arr.splice(arr.indexOf(num), 1);
+    // return arr.forEach(num => {
+    //     if(num % 2 === 0) {
+    //         console.log(arr.indexOf(num));
+    //         arr.splice(arr.indexOf(num), 1);
+    //     }
+    // });
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 === 0) {
+            arr.splice(i, 1);
         }
-    });
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------
