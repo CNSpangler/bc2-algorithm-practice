@@ -247,7 +247,6 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 export const removeVowels = (str) => {
     const arr = str.split('');
-    console.log(arr);
     arr.forEach(letter => {
         if(letter === 'a') {
             arr.splice(arr.indexOf(letter), 1);
@@ -275,5 +274,38 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 export const extractVowels = (str) => {
-    // Solution code here...
+    let vowelHolder = [];
+    const vowelArr = str.split('');
+    vowelArr.forEach(letter => {
+        if(letter === 'a') {
+            vowelHolder.push(letter);
+        } else if(letter === 'e') {
+            vowelHolder.push(letter);
+        } else if(letter === 'i') {
+            vowelHolder.push(letter);
+        } else if(letter === 'o') {
+            vowelHolder.push(letter);
+        } else if(letter === 'u') {
+            vowelHolder.push(letter);
+        } else return;
+    });
+    const vowels = vowelHolder.join('');
+    
+    const consArr = str.split('');
+    consArr.forEach(letter => {
+        if(letter === 'a') {
+            consArr.splice(consArr.indexOf(letter), 1);
+        } else if(letter === 'e') {
+            consArr.splice(consArr.indexOf(letter), 1);
+        } else if(letter === 'i') {
+            consArr.splice(consArr.indexOf(letter), 1);
+        } else if(letter === 'o') {
+            consArr.splice(consArr.indexOf(letter), 1);
+        } else if(letter === 'u') {
+            consArr.splice(consArr.indexOf(letter), 1);
+        }
+    });
+    const consonants = consArr.join('');
+
+    return [consonants, vowels];
 };

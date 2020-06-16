@@ -127,7 +127,7 @@ test('It should return the string without vowels', assert => {
     assert.equal(removeVowels('why'), 'why');
 });
 
-skip('It should return the string without vowels', assert => {
+test('It should return the string without vowels', assert => {
     assert.deepEqual(extractVowels('gregor'), ['grgr', 'eo']);
     assert.deepEqual(extractVowels('The quick brown fox'), ['Th qck brwn fx', 'eioou']);
 });
