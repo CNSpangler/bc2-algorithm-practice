@@ -220,7 +220,6 @@ export const removeLastCharacters = (str, numberOfCharacters) => {
     return arr.join('');
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
@@ -228,9 +227,13 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 ------------------------------------------------------------------------------------------------ */
 
 export const totalSumCSV = (str) => {
-    // let total = 0;
-    // // Solution code here...
-    // return total;
+    let total = 0;
+    let arr = str.split(',');
+    const nums = arr.map(num => Number(num));
+    
+    return nums.reduce((acc, curr) => {
+        return acc + curr;
+    });
 };
 
 
