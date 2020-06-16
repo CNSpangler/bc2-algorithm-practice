@@ -184,7 +184,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 export const removeEvenValues = (arr) => {
-    // Solution code here...
+    return arr.map(num => {
+        if(num % 2 === 0) {
+            console.log(arr.indexOf(num));
+            arr.splice(arr.indexOf(num), 1);
+        }
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
