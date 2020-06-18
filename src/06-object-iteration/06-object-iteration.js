@@ -76,12 +76,6 @@ export const getHouseSizes = houses => {
         return { house: name, members: num };
     });
 
-
-
-
-
-
-
     // const arr = [];
     // const entries = Object.entries(houses);
     // console.log(entries);
@@ -105,7 +99,9 @@ This function should take in the house data and a house name and return a the na
 ------------------------------------------------------------------------------------------------ */
 
 export const getHouseHead = (houses, houseToFind) => {
-    // Solution code here...
+    const arr = Object.entries(houses);
+    console.log(arr);
+    return arr.map(house => house[1]['head']);
 };
 
 /* ------------------------------------------------------------------------------------------------
