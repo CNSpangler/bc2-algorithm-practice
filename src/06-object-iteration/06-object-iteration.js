@@ -68,16 +68,30 @@ Write a function named getHousesWithSize that uses Object.entries to return a ne
 ------------------------------------------------------------------------------------------------ */
 
 export const getHouseSizes = houses => {
-    const arr = [];
-    const entries = Object.entries(houses);
-    console.log(entries);
-    arr.push(entries.forEach(entry => {
-        return {
-            house: entry[0],
-            members: entry[0][1].characters.length
-        };
-    }));
-    return arr;
+    const arr = Object.entries(houses);
+
+    return arr.map(house => {
+        const name = house[0];
+        const num = house[1].characters.length;
+        return { house: name, members: num };
+    });
+
+
+
+
+
+
+
+    // const arr = [];
+    // const entries = Object.entries(houses);
+    // console.log(entries);
+    // arr.push(entries.forEach(entry => {
+    //     return {
+    //         house: entry[0],
+    //         members: entry[0][1].characters.length
+    //     };
+    // }));
+    // return arr;
 };
 
 /*------------------------------------------------------------------------------------------------
