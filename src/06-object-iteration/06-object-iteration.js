@@ -29,9 +29,8 @@ CHALLENGE 3
 Write a function named getHouseWords that uses Object.values to return a new array containing the words (mottos) of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 export const getHouseWords = houses => {
-    houses.map(house => {
-        return house.words;
-    });
+    const arr = Object.values(houses);
+    return arr.map(house => house.words);
 };
 
 
