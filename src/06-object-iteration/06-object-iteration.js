@@ -99,9 +99,10 @@ This function should take in the house data and a house name and return a the na
 ------------------------------------------------------------------------------------------------ */
 
 export const getHouseHead = (houses, houseToFind) => {
-    const arr = Object.entries(houses);
-    console.log(arr);
-    return arr.map(house => house[1]['head']);
+    // const arr = Object.entries(houses);
+    // console.log(arr);
+    // return arr.map(house => house[1]['head']);
+    return (houses[houseToFind]['head']);
 };
 
 /* ------------------------------------------------------------------------------------------------
