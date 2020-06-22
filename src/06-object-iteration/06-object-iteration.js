@@ -117,10 +117,9 @@ export const totalCharacters = houses => {
     let count = 0;
     arr.forEach(house => {
         const inner = house[1];
-        console.log(inner.characters.length);
         count = (count + inner.characters.length);
     });
-    
+
     return count;
 };
 
@@ -131,7 +130,9 @@ Write a function named getHouseWordsMapped that does the same things as getHouse
 ------------------------------------------------------------------------------------------------ */
 
 export const getHouseWordsMapped = houses => {
-    // Solution code here...
+    return Object.values(houses).map(house => {
+        return house.words;
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
