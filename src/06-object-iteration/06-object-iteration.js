@@ -142,5 +142,20 @@ Write a function named totalCharactersReduced that that does the same things as 
 ------------------------------------------------------------------------------------------------ */
 
 export const totalCharactersReduced = houses => {
-    // Solution code here...
+    const arr = Object.entries(houses);
+    const inner = arr.map(house => house[1]);
+    console.log(inner);
+
+    return inner.reduce((acc, curr) => {
+        return acc + curr.characters.length;
+    }, 0);
+    
+    // let count = 0;
+    // arr.forEach(house => {
+    //     const inner = house[1];
+    //     count = (count + inner.characters.length);
+    // });
+
+    // return count;
+
 };
