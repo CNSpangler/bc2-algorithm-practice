@@ -112,7 +112,16 @@ Write a function named totalCharacters that takes in the house data and returns 
 ------------------------------------------------------------------------------------------------ */
 
 export const totalCharacters = houses => {
-    // Solution code here...
+    const arr = Object.entries(houses);
+    
+    let count = 0;
+    arr.forEach(house => {
+        const inner = house[1];
+        console.log(inner.characters.length);
+        count = (count + inner.characters.length);
+    });
+    
+    return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
