@@ -17,12 +17,6 @@ export const forLoopTwoToThe = (arr) => {
     }
     return newArr;
 
-
-
-
-
-
-
     // let newArr = [];  
     // for(let i = 0; i < arr.length; i++) {
     //     const num = arr[i];
@@ -39,15 +33,10 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 export const forEachTwoToThe = (arr) => {
-
-
-
-
-
-
-
-
-
+    arr.forEach(num => {
+        return Math.pow(2, num);
+    });
+    return arr;
 
     // let newArr = [];
     // arr.forEach((item) => {
