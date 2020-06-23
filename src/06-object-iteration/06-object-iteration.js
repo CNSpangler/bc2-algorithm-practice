@@ -33,9 +33,6 @@ export const getHouseWords = houses => {
     return arr.map(house => house.words);
 };
 
-
-
-
 // export const getHouseWords = houses => {
 //     const values = [Object.values(houses)];
 //     console.log(values);
@@ -157,5 +154,4 @@ export const totalCharactersReduced = houses => {
     // });
 
     // return count;
-
 };

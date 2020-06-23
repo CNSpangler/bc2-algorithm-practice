@@ -1,4 +1,4 @@
-import './06-object-iteration.test.js';
+import './07-map.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');

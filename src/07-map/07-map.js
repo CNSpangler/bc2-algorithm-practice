@@ -11,13 +11,22 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 export const forLoopTwoToThe = (arr) => {
-    let newArr = [];  
-    for(let i = 0; i < arr.length; i++) {
-        const num = arr[i];
-        const newNum = Math.pow(2, num);
-        newArr.push(newNum);
-    }
-    return newArr;
+
+
+
+
+
+
+
+
+
+    // let newArr = [];  
+    // for(let i = 0; i < arr.length; i++) {
+    //     const num = arr[i];
+    //     const newNum = Math.pow(2, num);
+    //     newArr.push(newNum);
+    // }
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,12 +36,22 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 export const forEachTwoToThe = (arr) => {
-    let newArr = [];
-    arr.forEach((item) => {
-        const newNum = Math.pow(2, item);
-        newArr.push(newNum);
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+    // let newArr = [];
+    // arr.forEach((item) => {
+    //     const newNum = Math.pow(2, item);
+    //     newArr.push(newNum);
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,12 +61,23 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 export const mapTwoToThe = (arr) => {
-    const newArr = [];  
-    arr.map(num => {
-        const newNum = Math.pow(2, num);
-        newArr.push(newNum);
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+
+    // const newArr = [];  
+    // arr.map(num => {
+    //     const newNum = Math.pow(2, num);
+    //     newArr.push(newNum);
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,12 +91,24 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 export const charCode = (arr) => {
-    const newArr = [];
-    arr.map(char => {
-        const item = char.charCodeAt();
-        newArr.push(item);
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+
+
+    // const newArr = [];
+    // arr.map(char => {
+    //     const item = char.charCodeAt();
+    //     newArr.push(item);
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,17 +122,30 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 export const evenOdd = (arr) => {
-    const newArr = [];
-    arr.map(num => {
-        if(isNaN(num)) {
-            newArr.push('N/A');
-        } else if(num % 2 === 0) {
-            newArr.push('even');
-        } else {
-            newArr.push('odd');
-        } 
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const newArr = [];
+    // arr.map(num => {
+    //     if(isNaN(num)) {
+    //         newArr.push('N/A');
+    //     } else if(num % 2 === 0) {
+    //         newArr.push('even');
+    //     } else {
+    //         newArr.push('odd');
+    //     } 
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,13 +160,25 @@ extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
 export const extractAbilities = (arr) => {
-    const newArr = [];
-    arr.map((thing) => {
-        console.log(thing.ability.name);
-        const abilityName = thing.ability.name;
-        newArr.push(abilityName);
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+
+
+    // const newArr = [];
+    // arr.map((thing) => {
+    //     console.log(thing.ability.name);
+    //     const abilityName = thing.ability.name;
+    //     newArr.push(abilityName);
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,13 +195,29 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 
 
 export const extractStats = (arr) => {
-    const newArr = [];
-    arr.map(item => {
-        const newItem = {
-            name: item.stat.name,
-            total: item.effort + item.baseStat,
-        };
-        newArr.push(newItem);
-    });
-    return newArr;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    // const newArr = [];
+    // arr.map(item => {
+    //     const newItem = {
+    //         name: item.stat.name,
+    //         total: item.effort + item.baseStat,
+    //     };
+    //     newArr.push(newItem);
+    // });
+    // return newArr;
 };
