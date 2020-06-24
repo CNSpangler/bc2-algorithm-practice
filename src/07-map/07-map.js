@@ -128,17 +128,7 @@ extractAbilities(snorlaxAbilities.abilities)
 ------------------------------------------------------------------------------------------------ */
 
 export const extractAbilities = (arr) => {
-
-
-
-
-
-
-
-
-
-
-
+    return arr.map(ability => ability.ability.name);
 
     // const newArr = [];
     // arr.map((thing) => {
