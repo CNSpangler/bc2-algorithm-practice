@@ -33,10 +33,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 export const forEachTwoToThe = (arr) => {
+    let newArr = [];
     arr.forEach(num => {
-        return Math.pow(2, num);
+        newArr.push(Math.pow(2, num));
     });
-    return arr;
+    return newArr;
 
     // let newArr = [];
     // arr.forEach((item) => {
@@ -53,7 +54,9 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 export const mapTwoToThe = (arr) => {
-
+    return arr.map(num => {
+        return Math.pow(2, num);
+    });
 
 
 

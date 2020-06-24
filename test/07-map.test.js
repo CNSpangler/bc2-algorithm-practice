@@ -24,27 +24,27 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should return two raised to the power of the integer', assert => {
+test('It should return two raised to the power of the integer for loop', assert => {
     assert.deepEqual(forLoopTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-test('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative for loop', assert => {
     assert.deepEqual(forLoopTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
-test('It should return two raised to the power of the integer', assert => {
+test('It should return two raised to the power of the integer forEach', assert => {
     assert.deepEqual(forEachTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-skip('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative forEach', assert => {
     assert.deepEqual(forEachTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
-skip('It should return two raised to the power of the integer', assert => {
+test('It should return two raised to the power of the integer map', assert => {
     assert.deepEqual(mapTwoToThe([0, 4, 5]), [1, 16, 32]);
 });
 
-skip('It should return decimals if the integer is negative', assert => {
+test('It should return decimals if the integer is negative map', assert => {
     assert.deepEqual(mapTwoToThe([-1, -2, -3]), [0.5, 0.25, 0.125]);
 });
 
