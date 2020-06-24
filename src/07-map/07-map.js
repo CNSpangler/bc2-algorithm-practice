@@ -153,22 +153,12 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 
 
 export const extractStats = (arr) => {
+    return arr.map(stat => ({
+        name: stat.stat.name,
+        total: stat.effort + stat.baseStat
+    }));
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     // const newArr = [];
     // arr.map(item => {
     //     const newItem = {
