@@ -58,15 +58,6 @@ export const mapTwoToThe = (arr) => {
         return Math.pow(2, num);
     });
 
-
-
-
-
-
-
-
-
-
     // const newArr = [];  
     // arr.map(num => {
     //     const newNum = Math.pow(2, num);
@@ -86,17 +77,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 export const charCode = (arr) => {
-
-
-
-
-
-
-
-
-
-
-
+    return arr.map(item => item.charCodeAt());
 
     // const newArr = [];
     // arr.map(char => {
