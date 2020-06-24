@@ -98,18 +98,10 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 export const evenOdd = (arr) => {
-
-
-
-
-
-
-
-
-
-
-
-
+    return arr.map(item => {
+        if(isNaN(Number(item))) return 'N/A';
+        return (Number(item) % 2 === 0) ? 'even' : 'odd';
+    });
 
     // const newArr = [];
     // arr.map(num => {
