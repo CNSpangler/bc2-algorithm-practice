@@ -34,7 +34,7 @@ eye color:
 
 export const eyeColorTally = (arr) => {
     return arr.reduce((acc, curr) => {
-        const color = curr['eye_color'];
+        const color = curr.eye_color;
         acc[color] ? acc[color]++ : acc[color] = 1;
         return acc;
     }, {});
@@ -66,7 +66,7 @@ Write a function named eyeColorNames that, given the Star Wars data, uses reduce
 
 export const eyeColorNames = (arr) => {
     return arr.reduce((acc, curr) => {
-        const color = curr['eye_color'];
+        const color = curr.eye_color;
         acc[color] ? acc[color].push(curr['name']) : acc[color] = [curr['name']];
         return acc;
     }, {});
@@ -81,8 +81,8 @@ Write a function named countNumberOfChildren that, given the array of characters
 
 export const countNumberOfChildren = (arr) => {
     return arr.reduce((acc, curr) => {
-        if(curr['children']) {
-            return acc + curr['children'].length;
+        if(curr.children) {
+            return acc + curr.children.length;
         }
         return acc;
     }, 0);
@@ -103,7 +103,15 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 export const calculateAverage = (arr) => {
-
+    let avg = 0;
+    arr.reduce((acc, curr) => {
+        acc['count']++;
+        acc['sum'] = (acc['sum'] + curr);
+        avg = (acc['sum'] / acc['count']);
+        return acc;
+        // return (acc['sum'] / acc['count']);
+    }, { count: 0, sum: 0 });
+    return avg;
 
 
 
