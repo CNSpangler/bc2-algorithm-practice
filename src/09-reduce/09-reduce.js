@@ -80,16 +80,12 @@ Write a function named countNumberOfChildren that, given the array of characters
 
 
 export const countNumberOfChildren = (arr) => {
-
-
-
-
-
-
-
-
-
-
+    return arr.reduce((acc, curr) => {
+        if(curr['children']) {
+            return acc + curr['children'].length;
+        }
+        return acc;
+    }, 0);
 
     // const children = arr.reduce(function(accumulator, char, index) {
     //     let num = char.children.length; 
