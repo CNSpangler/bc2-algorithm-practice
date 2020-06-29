@@ -39,16 +39,6 @@ export const eyeColorTally = (arr) => {
         return acc;
     }, {});
 
-
-
-
-
-
-
-
-
-
-
     // const tally = arr.reduce(function(accumulator, char, index) {
     //     let count = 0;
     //     accumulator[char.eye_color] = count++;
@@ -59,7 +49,6 @@ export const eyeColorTally = (arr) => {
     //     return accumulator;
     // }, {});
     // return tally;
-
 };
 
 //
@@ -67,9 +56,7 @@ export const eyeColorTally = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named eyeColorNames that, given the Star Wars data, uses reduce to return an 
-object with a key for each eye color and whose value an array of character names having that 
-eye color:
+Write a function named eyeColorNames that, given the Star Wars data, uses reduce to return an object with a key for each eye color and whose value an array of character names having that eye color:
 
             blue: ['Luke Skywalker'], 
             yellow: ['C-3PO', 'Darth Vader'], 
@@ -78,7 +65,11 @@ eye color:
 ------------------------------------------------------------------------------------------------ */
 
 export const eyeColorNames = (arr) => {
-  // Solution code here...
+    return arr.reduce((acc, curr) => {
+        const color = curr['eye_color'];
+        acc[color] ? acc[color].push(curr['name']) : acc[color] = [curr['name']];
+        return acc;
+    }, {});
 };
 
 /* ------------------------------------------------------------------------------------------------

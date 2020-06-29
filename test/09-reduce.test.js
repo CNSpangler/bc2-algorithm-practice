@@ -87,7 +87,7 @@ test('It should return an object with eye color counts', assert => {
     );
 });
 
-skip('It should return an object with eye color names', assert => {
+test('It should return an object with eye color names', assert => {
     assert.equal(
         eyeColorNames(starWarsData), 
         { 
