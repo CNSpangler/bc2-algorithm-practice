@@ -9,11 +9,19 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 export const countNumberOfElements = (arr) => {
-    const numElements = arr.reduce(function(accumulator, value, index) {
-        accumulator++;
-        return accumulator;
-    }, 0);
-    return numElements;
+
+
+
+
+
+
+
+
+    // const numElements = arr.reduce(function(accumulator, value, index) {
+    //     accumulator++;
+    //     return accumulator;
+    // }, 0);
+    // return numElements;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,16 +36,28 @@ eye color:
 
 
 export const eyeColorTally = (arr) => {
-    const tally = arr.reduce(function(accumulator, char, index) {
-        let count = 0;
-        accumulator[char.eye_color] = count++;
 
-        // if(char.eye_color === 'blue') {
-        //     char.blue.accumulator++;
-        // }
-        return accumulator;
-    }, {});
-    return tally;
+
+
+
+
+
+
+
+
+
+
+
+    // const tally = arr.reduce(function(accumulator, char, index) {
+    //     let count = 0;
+    //     accumulator[char.eye_color] = count++;
+
+    //     // if(char.eye_color === 'blue') {
+    //     //     char.blue.accumulator++;
+    //     // }
+    //     return accumulator;
+    // }, {});
+    // return tally;
 
 };
 
@@ -68,11 +88,22 @@ Write a function named countNumberOfChildren that, given the array of characters
 
 
 export const countNumberOfChildren = (arr) => {
-    const children = arr.reduce(function(accumulator, char, index) {
-        let num = char.children.length; 
-        return (accumulator + num);
-    }, 0);
-    return children;
+
+
+
+
+
+
+
+
+
+
+
+    // const children = arr.reduce(function(accumulator, char, index) {
+    //     let num = char.children.length; 
+    //     return (accumulator + num);
+    // }, 0);
+    // return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,7 +115,18 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 export const calculateAverage = (arr) => {
-    arr.reduce((a, b) => a + b, 0);
+
+
+
+
+
+
+
+
+
+
+
+    // arr.reduce((a, b) => a + b, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,22 +138,45 @@ You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
 const isPrime = (value) => {
-    for(let i = 2; i < value; i++) {
-        if(value % i === 0) {
-            return false;
-        }
-    }
-    return value > 1;
+
+
+
+
+
+
+
+
+
+
+    // for(let i = 2; i < value; i++) {
+    //     if(value % i === 0) {
+    //         return false;
+    //     }
+    // }
+    // return value > 1;
 };
 
 export const countPrimeNumbers = (arr) => {
-    const primes = arr.reduce(function(accumulator, num, index) {
-        if(isPrime(num) === true) {
-            accumulator++;
-            console.log(accumulator);
-        }
-    }, 0);
-    return primes;
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    // const primes = arr.reduce(function(accumulator, num, index) {
+    //     if(isPrime(num) === true) {
+    //         accumulator++;
+    //         console.log(accumulator);
+    //     }
+    // }, 0);
+    // return primes;
 };
 
 /* ------------------------------------------------------------------------------------------------

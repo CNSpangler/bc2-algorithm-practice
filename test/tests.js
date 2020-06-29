@@ -1,4 +1,4 @@
-import './07-map.test.js';
+import './09-reduce.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
