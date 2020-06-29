@@ -9,13 +9,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 export const countNumberOfElements = (arr) => {
-
-
-
-
-
-
-
+    return arr.reduce((acc, curr) => {
+        acc++;
+        return acc;
+    }, 0);
 
     // const numElements = arr.reduce(function(accumulator, value, index) {
     //     accumulator++;
@@ -169,7 +166,7 @@ export const countPrimeNumbers = (arr) => {
 
 
 
-    
+
     // const primes = arr.reduce(function(accumulator, num, index) {
     //     if(isPrime(num) === true) {
     //         accumulator++;
