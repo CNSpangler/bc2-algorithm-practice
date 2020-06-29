@@ -33,7 +33,11 @@ eye color:
 
 
 export const eyeColorTally = (arr) => {
-
+    return arr.reduce((acc, curr) => {
+        const color = curr['eye_color'];
+        acc[color] ? acc[color]++ : acc[color] = 1;
+        return acc;
+    }, {});
 
 
 
