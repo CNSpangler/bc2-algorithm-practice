@@ -113,16 +113,7 @@ export const calculateAverage = (arr) => {
     }, { count: 0, sum: 0 });
     return avg;
 
-
-
-
-
-
-
-
-
-
-    // arr.reduce((a, b) => a + b, 0);
+    //in real world, would just use reduce to get sum of items in array, then divide by arr.length
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,26 +125,19 @@ You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
 const isPrime = (value) => {
-
-
-
-
-
-
-
-
-
-
-    // for(let i = 2; i < value; i++) {
-    //     if(value % i === 0) {
-    //         return false;
-    //     }
-    // }
-    // return value > 1;
+    for(let i = 2; i < value; i++) {
+        if(value % i === 0) {
+            return false;
+        }
+    }
+    return value > 1;
 };
 
 export const countPrimeNumbers = (arr) => {
-
+    return arr.reduce((acc, curr) => {
+        if(isPrime(curr)) acc++;
+        return acc;
+    }, 0);
 
 
 
