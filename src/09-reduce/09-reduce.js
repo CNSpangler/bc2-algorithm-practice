@@ -139,17 +139,6 @@ export const countPrimeNumbers = (arr) => {
         return acc;
     }, 0);
 
-
-
-
-
-
-
-
-
-
-
-
     // const primes = arr.reduce(function(accumulator, num, index) {
     //     if(isPrime(num) === true) {
     //         accumulator++;
@@ -169,8 +158,13 @@ Hint: The accumulator should begin as { min: 0, max: 0 }
 
 ------------------------------------------------------------------------------------------------ */
 
-export const effortStats = (statName, arr) => {
-  // Solution code here...
+export const effortStats = (arr) => {
+    console.log(arr);
+    return arr.reduce((acc, curr) => {
+        if(acc.min > curr['effort']) acc.min = curr['effort'];
+        if(acc.max < curr['effort']) acc.max = curr['effort'];
+        return acc;
+    }, { min: null, max: 0 });
 };
 
 /* ------------------------------------------------------------------------------------------------

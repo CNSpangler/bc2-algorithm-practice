@@ -186,7 +186,7 @@ const snorlaxData = {
     weight: 4600,
 };
 
-skip('It should return effort stats that match the input', assert => {
+test('It should return effort stats that match the input', assert => {
     assert.deepEqual(
         effortStats(snorlaxData.stats), 
         { min: 2, max: 9 }
