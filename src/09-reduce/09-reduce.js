@@ -197,6 +197,7 @@ export const extractChildren = (arr) => {
     // console.log(classAChildren);
 
     const allChildren = arr.map(object => object.children);
-    console.log(allChildren);
-
+    const allRealChildren = allChildren.filter(item => item !== undefined).flat();
+    console.log(allRealChildren, 'allRealChildren');
+    // const flatChildren = allChildren.map(childArr => console.log(childArr, 'childArr'));
 };
