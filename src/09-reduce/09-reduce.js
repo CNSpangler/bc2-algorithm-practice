@@ -68,6 +68,7 @@ export const eyeColorNames = (arr) => {
     return arr.reduce((acc, curr) => {
         const color = curr.eye_color;
         acc[color] ? acc[color].push(curr['name']) : acc[color] = [curr['name']];
+        console.log(acc);
         return acc;
     }, {});
 };
@@ -186,16 +187,6 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 export const extractChildren = (arr) => {
-    // const allChildren = arr.map(object => object.children);
-    // // console.log(allChildren, 'allChildren');
-    // const classAChildren = allChildren.map(childArr => {
-    //     // console.log(childArr, 'childArr');
-    //     return childArr.filter(child => {
-    //         child.includes('a');
-    //     });
-    // });
-    // console.log(classAChildren);
-
     return arr
         .map(object => object.children)
         .filter(item => item !== undefined)

@@ -88,7 +88,7 @@ test('It should return an object with eye color counts', assert => {
 });
 
 test('It should return an object with eye color names', assert => {
-    assert.equal(
+    assert.deepEqual(
         eyeColorNames(starWarsData), 
         { 
             blue: ['Luke Skywalker'], 
