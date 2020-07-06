@@ -159,12 +159,20 @@ Hint: The accumulator should begin as { min: 0, max: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 export const effortStats = (arr) => {
-    console.log(arr);
-    return arr.reduce((acc, curr) => {
-        if(acc.min > curr['effort']) acc.min = curr['effort'];
-        if(acc.max < curr['effort']) acc.max = curr['effort'];
-        return acc;
-    }, { min: null, max: 0 });
+    const minMaxArr = arr.reduce((a, b) => {
+        console.log(a > b);
+        return a > b;
+    }, {});
+
+
+
+
+    // return arr.reduce((acc, curr) => {
+    //     acc.min = curr['effort'];
+    //     if(acc.min > curr['effort']) acc.min = curr['effort'];
+    //     if(acc.max < curr['effort']) acc.max = curr['effort'];
+    //     return acc;
+    // }, { min: 0, max: 0 });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -178,5 +186,17 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 export const extractChildren = (arr) => {
-  // Solution code here...
+    // const allChildren = arr.map(object => object.children);
+    // // console.log(allChildren, 'allChildren');
+    // const classAChildren = allChildren.map(childArr => {
+    //     // console.log(childArr, 'childArr');
+    //     return childArr.filter(child => {
+    //         child.includes('a');
+    //     });
+    // });
+    // console.log(classAChildren);
+
+    const allChildren = arr.map(object => object.children);
+    console.log(allChildren);
+
 };

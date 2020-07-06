@@ -186,14 +186,14 @@ const snorlaxData = {
     weight: 4600,
 };
 
-test('It should return effort stats that match the input', assert => {
+skip('It should return effort stats that match the input', assert => {
     assert.deepEqual(
         effortStats(snorlaxData.stats), 
         { min: 2, max: 9 }
     );
 });
 
-skip('It should return an array containing the names of the children', assert => {
+test('It should return an array containing the names of the children', assert => {
     assert.deepEqual(
         extractChildren(characters), 
         ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']
