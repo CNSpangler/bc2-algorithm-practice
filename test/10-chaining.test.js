@@ -28,12 +28,12 @@ test('It should return the number of times the input is in the nested arrays', a
     assert.equal(count(12, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]), 0);
 });
 
-test('It should work on empty arrays', assert => {
+skip('It should work on empty arrays', assert => {
     assert.equal(count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []]), 4);
     assert.equal(count(5, []), 0);
 });
 
-test('It should add all the numbers in the arrays', assert => {
+skip('It should add all the numbers in the arrays', assert => {
     const arraysOfNumbers = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6]];
     assert.equal(totalSum(arraysOfNumbers), 66);
 });

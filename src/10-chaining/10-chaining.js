@@ -17,15 +17,28 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 // };
 
 export const count = (target, input) => {
-    const arr = input.flat();
+    
 
-    const result = arr.reduce(function(acc, curr) {
-        if(curr === target) {
-            acc++;  
-        }
-        return acc;
-    }, 0);
-    return result;
+
+
+
+
+
+
+
+
+
+
+
+    // const arr = input.flat();
+
+    // const result = arr.reduce(function(acc, curr) {
+    //     if(curr === target) {
+    //         acc++;  
+    //     }
+    //     return acc;
+    // }, 0);
+    // return result;
 };
 
 
@@ -62,14 +75,19 @@ You may want to use filter, map, or reduce for this problem, but are not require
 
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
+export const totalSum = (input) => {
+
+};
+
+
+
 
 // export const totalSum = (input) => {
 //     const masterArr = input.reduce(function(a, b){
 //         return a.concat(b);
 //     }, []);
 //     console.log(masterArr);
-// };
-  
+// };  
 
 // export const totalSum = (input) => {
 //     let masterArr = input.map(arr => {
@@ -86,21 +104,21 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 //     }, []);
 // };
 
-export const totalSum = (input) => {
-    const result = input.map(function(y) {
-        return y.reduce(function(a, b) {
-            return a + b;
-        });
-    });
-    // const total = result.map((a, b) => {
-    //     return a + b;
-    // });
+// export const totalSum = (input) => {
+//     const result = input.map(function(y) {
+//         return y.reduce(function(a, b) {
+//             return a + b;
+//         });
+//     });
+//     // const total = result.map((a, b) => {
+//     //     return a + b;
+//     // });
 
-    const total = result.reduce(function(a, b) {
-        return a + b;
-    }, 0);
-    return total;
-};
+//     const total = result.reduce(function(a, b) {
+//         return a + b;
+//     }, 0);
+//     return total;
+// };
 
 
 
