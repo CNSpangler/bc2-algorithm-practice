@@ -193,9 +193,9 @@ skip('It should return effort stats that match the input', assert => {
     );
 });
 
-test('It should return an array containing the names of the children', assert => {
+test('It should return an array containing the names of the children containing letter a', assert => {
     assert.deepEqual(
         extractChildren(characters), 
-        ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']
+        ['Sansa', 'Arya', 'Bran', 'Myrcella', 'Rhaegal', 'Margaery', 'Loras']
     );
 });
