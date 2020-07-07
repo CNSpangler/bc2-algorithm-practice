@@ -71,16 +71,6 @@ const starWarsData = [{
     gender: 'male',
 },
 {
-    name: 'C-3PO',
-    height: '167',
-    mass: '75',
-    hair_color: 'n/a',
-    skin_color: 'gold',
-    eye_color: 'yellow',
-    birth_year: '112BBY',
-    gender: 'n/a'
-},
-{
     name: 'R2-D2',
     height: '96',
     mass: '32',
@@ -88,6 +78,16 @@ const starWarsData = [{
     skin_color: 'white, blue',
     eye_color: 'red',
     birth_year: '33BBY',
+    gender: 'n/a'
+},
+{
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
     gender: 'n/a'
 },
 {
@@ -126,6 +126,6 @@ test('It should return only characters that are taller than specified value', as
     );
 });
 
-skip('It should return the name of the shortest character', assert => {
+test('It should return the name of the shortest character', assert => {
     assert.deepEqual(findShortestName(starWarsData), 'R2-D2');
 });

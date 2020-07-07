@@ -166,5 +166,14 @@ Write a function named findShortestName that, given the Star Wars data from Chal
 ------------------------------------------------------------------------------------------------ */
 
 export const findShortestName = (data) => {
-  // Solution code here...
+
+    console.log(data);
+    data.reduce((acc, curr) => {
+        console.log(curr, 'curr');
+        if(curr.height < acc.height) {
+            acc.height = curr.height;
+            acc.name = curr.name;
+        }
+        console.log(acc.height, 'acc height');
+    }, { height: 9999999, name: 'John' });
 };
