@@ -76,9 +76,6 @@ export const totalSum = (input) => {
         }, 0);
 };
 
-
-
-
 // export const totalSum = (input) => {
 //     const masterArr = input.reduce(function(a, b){
 //         return a.concat(b);
@@ -132,14 +129,9 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 export const divisibleByFiveTwoToThePower = (input) => {
-    // console.log(
-    //     input.map(arr => {
-    //         return arr.filter(item => !isNaN(item) && item % 5 === 0);
-    //     })
-    // );
     return input.map(arr => {
         return arr
-            .filter(item => !isNaN(item) && item % 5 === 0)
+            .filter(item => !isNaN(item) && item === Number(item) && item % 5 === 0)
             .map(item => Math.pow(2, item));
     });
 };
@@ -156,7 +148,12 @@ For example, "Luke Skywalker and C-3PO".
 ------------------------------------------------------------------------------------------------ */
 
 export const findTallerThan = (minHeight, data) => {
-  // Solution code here...
+    // iterate through data
+    // check if each character is tall enough
+    // return array containing only tall characters
+    // join the array with ('and')
+
+    return data.filter(character => character.height >= minHeight);
 };
 
 /* ------------------------------------------------------------------------------------------------

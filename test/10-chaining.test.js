@@ -45,14 +45,14 @@ test('It should return numbers divisible by five, then raise two to the power of
     );
 });
 
-skip('It should return an empty array if none of the numbers are divisible by five', assert => {
+test('It should return an empty array if none of the numbers are divisible by five', assert => {
     assert.deepEqual(
         divisibleByFiveTwoToThePower([[1, 2, 3], [5, 10, 15]]), 
         [[], [32, 1024, 32768]]
     );
 });
 
-skip('It should return an empty array if the values are not numbers', assert => {
+test('It should return an empty array if the values are not numbers', assert => {
     assert.deepEqual(
         divisibleByFiveTwoToThePower([['one', 'two', 'five'], ['5', '10', '15'], [5]]), 
         [[], [], [32]]
