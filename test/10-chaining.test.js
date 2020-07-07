@@ -111,7 +111,7 @@ const starWarsData = [{
     gender: 'female'
 }];
 
-skip('It should return only characters that are taller than specified value', assert => {
+test('It should return only characters that are taller than specified value', assert => {
     assert.equal(
         findTallerThan(165, starWarsData), 
         'Luke Skywalker and C-3PO and Darth Vader'

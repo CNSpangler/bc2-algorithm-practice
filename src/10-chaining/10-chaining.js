@@ -153,7 +153,10 @@ export const findTallerThan = (minHeight, data) => {
     // return array containing only tall characters
     // join the array with ('and')
 
-    return data.filter(character => character.height >= minHeight);
+    return data
+        .filter(character => character.height >= minHeight)
+        .map(character => character.name)
+        .join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
