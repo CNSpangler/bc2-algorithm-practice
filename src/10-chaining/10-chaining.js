@@ -71,7 +71,7 @@ export const totalSum = (input) => {
     return input
         .flat()
         .reduce((acc, curr) => {
-            acc + curr;
+            acc = acc + curr;
             return acc;
         }, 0);
 };
