@@ -68,7 +68,12 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 export const totalSum = (input) => {
-
+    return input
+        .flat()
+        .reduce((acc, curr) => {
+            acc + curr;
+            return acc;
+        }, 0);
 };
 
 
