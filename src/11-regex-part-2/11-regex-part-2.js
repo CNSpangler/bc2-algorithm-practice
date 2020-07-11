@@ -42,21 +42,11 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 export const validateEmail = (email) => {
-
-
-
-
-
-
-
-
-
-
-    // if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
+    if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)+(\.com|\.org|\.net)$/.test(email)) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------

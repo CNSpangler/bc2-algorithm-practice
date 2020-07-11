@@ -32,23 +32,23 @@ test('It should validate a PIN of exactly four digits', assert => {
     assert.equal(validatePin('0000'), true);
 });
 
-skip('It should match a basic email', assert => {
+test('It should match a basic email', assert => {
     assert.equal(validateEmail('joe@company.com'), true);
 });
 
-skip('It should match if the email contains a period', assert => {
+test('It should match if the email contains a period', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-skip('It should match if the email contains other top-level domains', assert => {
+test('It should match if the email contains other top-level domains', assert => {
     assert.equal(validateEmail('joe@company.org'), true);
 });
 
-skip('It should match if the email contains a period and other top-level domains', assert => {
+test('It should match if the email contains a period and other top-level domains', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-skip('It should fail things that aren\'t email addresses', assert => {
+test('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('justastring'), false);
     assert.equal(validateEmail('missing@adomain'), false);
     assert.equal(validateEmail('@noname.com'), false);
