@@ -45,7 +45,7 @@ export const validateEmail = (email) => {
     const emailBits = email.split('@');
 
     if(emailBits[0].split('').filter(char => char === '.').length > 1) {
-        return false
+        return false;
     } else if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)+(\.com|\.org|\.net)$/.test(email)) {
         return true;
     } else {
@@ -75,16 +75,14 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 export const validatePhoneNumber = (phoneNumber) => {
-
-
-
-
-
-
-
-    // if(/^[2-9]\d{2}-\d{3}-\d{4}$/.test(phoneNumber) || /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/.test(phoneNumber)) {
-    //     return true;
-    // }
+    if(
+        /^[2-9]\d{3}-| \d{3}-| \d{4}$/.test(phoneNumber) 
+        || /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/.test(phoneNumber)
+        || /\d{10}/.test(phoneNumber)
+        || /\d{3}-| \d{7}/.test(phoneNumber)
+    ) {
+        return true;
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------

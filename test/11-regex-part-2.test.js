@@ -21,7 +21,7 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-test('It should validate a PIN of exactly four digits', assert => {
+skip('It should validate a PIN of exactly four digits', assert => {
     assert.equal(validatePin(1234), true);
     assert.equal(validatePin(123), false);
     assert.equal(validatePin(12345), false);
@@ -32,23 +32,23 @@ test('It should validate a PIN of exactly four digits', assert => {
     assert.equal(validatePin('0000'), true);
 });
 
-test('It should match a basic email', assert => {
+skip('It should match a basic email', assert => {
     assert.equal(validateEmail('joe@company.com'), true);
 });
 
-test('It should match if the email contains a period', assert => {
+skip('It should match if the email contains a period', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-test('It should match if the email contains other top-level domains', assert => {
+skip('It should match if the email contains other top-level domains', assert => {
     assert.equal(validateEmail('joe@company.org'), true);
 });
 
-test('It should match if the email contains a period and other top-level domains', assert => {
+skip('It should match if the email contains a period and other top-level domains', assert => {
     assert.equal(validateEmail('joe.schmoe@company.net'), true);
 });
 
-test('It should fail things that aren\'t email addresses', assert => {
+skip('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('justastring'), false);
     assert.equal(validateEmail('missing@adomain'), false);
     assert.equal(validateEmail('@noname.com'), false);
@@ -60,7 +60,7 @@ test('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('no.middle.names@foryou.com'), false);
 });
 
-skip('It should match the acceptable phone number formats', assert => {
+test('It should match the acceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('(555) 555-5555'), true);
     assert.equal(validatePhoneNumber('555 555-5555'), true);
     assert.equal(validatePhoneNumber('555-555-5555'), true);
