@@ -98,5 +98,5 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 
 export const findTagNames = elements => {
     console.log(elements);
-    return elements.map(string => string.match(/(?<=<\/)(.*?)(?=>)/));
+    return elements.map(string => string.match(/(?<=<)(\/.*?)(?=>)/g).join(''));
 };
