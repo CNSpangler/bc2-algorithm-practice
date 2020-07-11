@@ -60,7 +60,7 @@ skip('It should fail things that aren\'t email addresses', assert => {
     assert.equal(validateEmail('no.middle.names@foryou.com'), false);
 });
 
-test('It should match the acceptable phone number formats', assert => {
+skip('It should match the acceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('(555) 555-5555'), true);
     assert.equal(validatePhoneNumber('555 555-5555'), true);
     assert.equal(validatePhoneNumber('555-555-5555'), true);
@@ -83,7 +83,7 @@ skip('It should not match unacceptable phone number formats', assert => {
     assert.equal(validatePhoneNumber('55_55_5555'), false);
 });
 
-skip('It should return the closing tags', assert => {
+test('It should return the closing tags', assert => {
     assert.deepEqual(
         findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>']),
         ['/h1', '/p']

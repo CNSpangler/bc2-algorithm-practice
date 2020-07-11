@@ -77,11 +77,13 @@ Return either true or false.
 export const validatePhoneNumber = (phoneNumber) => {
     if(
         /^[2-9]\d{3}-| \d{3}-| \d{4}$/.test(phoneNumber) 
-        || /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/.test(phoneNumber)
-        || /\d{10}/.test(phoneNumber)
-        || /\d{3}-| \d{7}/.test(phoneNumber)
+        || /^(\(\d{3}\)|(\d{3}-))?\d{3}-\d{4}$/.test(phoneNumber)
+        || /^\d{10}$/.test(phoneNumber)
+        || /^\d{3}-| \d{7}$/.test(phoneNumber)
     ) {
         return true;
+    } else {
+        return false;
     }
 };
 
@@ -95,5 +97,6 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 export const findTagNames = elements => {
-  // Solution code here...
+    console.log(elements);
+    return elements.map(string => string.match(/(?<=<\/)(.*?)(?=>)/));
 };
