@@ -9,14 +9,21 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 export const validatePin = (pin) => {
-    const strPin = String(pin);
-    if(strPin.length === 4) {
-        if(/[0-9]/g.test(strPin)) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {return false;}
+    const pinStr = pin.toString().split('');
+    if(pinStr.length !== 4) {
+        return false;
+    } else {
+        return /[0-9]/g.test(pinStr);
+    }
+
+    // const strPin = String(pin);
+    // if(strPin.length === 4) {
+    //     if(/[0-9]/g.test(strPin)) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // } else {return false;}
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,11 +42,21 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 export const validateEmail = (email) => {
-    if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        return true;
-    } else {
-        return false;
-    }
+
+
+
+
+
+
+
+
+
+
+    // if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,9 +81,16 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 export const validatePhoneNumber = (phoneNumber) => {
-    if(/^[2-9]\d{2}-\d{3}-\d{4}$/.test(phoneNumber) || /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/.test(phoneNumber)) {
-        return true;
-    }
+
+
+
+
+
+
+
+    // if(/^[2-9]\d{2}-\d{3}-\d{4}$/.test(phoneNumber) || /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/.test(phoneNumber)) {
+    //     return true;
+    // }
 };
 
 /* ------------------------------------------------------------------------------------------------
