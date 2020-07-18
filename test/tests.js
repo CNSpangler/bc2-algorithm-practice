@@ -1,4 +1,4 @@
-import './11-regex-part-2.test.js';
+import './12-nested-loops.test.js';
 const test = QUnit.test;
 
 QUnit.module('Test Setup');
