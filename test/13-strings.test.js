@@ -34,7 +34,7 @@ test('It should return the first letter of each element of the array', assert =>
     assert.deepEqual(firstLetters([]), []);
 });
 
-test('It should return only the strings that contain smiley faces', assert => {
+skip('It should return only the strings that contain smiley faces', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.deepEqual(findHappiness(words), ['apple (:)', ':)banana', 'cant:)aloupe']);
@@ -43,14 +43,14 @@ test('It should return only the strings that contain smiley faces', assert => {
     assert.deepEqual(findHappiness([':) yay', ':( no', '', '', '', '']), [':) yay']);
 });
 
-test('It should return a standardized set of phone numbers', assert => {
+skip('It should return a standardized set of phone numbers', assert => {
     const nums = ['(123) 456-7890', '(222) 222-2222'];
 
     assert.deepEqual(standardizePhoneNumbers(nums), ['1234567890', '2222222222']);
     assert.deepEqual(standardizePhoneNumbers([nums[0]]), ['1234567890']);
 });
 
-test('It should only return the odd indexed characters from the string', assert => {
+skip('It should only return the odd indexed characters from the string', assert => {
     assert.equal(onlyOddChars('0123456789'), '13579');
     assert.equal(onlyOddChars('abcd'), 'bd');
     assert.equal(onlyOddChars('a'), '');

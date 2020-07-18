@@ -18,12 +18,16 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 // };
 
 export const firstLetters = (arr) => {
-    const newArr = [];
-    arr.forEach(string => {
-        const letter = string.slice(0, 1);
-        newArr.push(letter);
+    return arr.map(string => {
+        return string[0];
     });
-    return newArr;
+
+    // const newArr = [];
+    // arr.forEach(string => {
+    //     const letter = string.slice(0, 1);
+    //     newArr.push(letter);
+    // });
+    // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------

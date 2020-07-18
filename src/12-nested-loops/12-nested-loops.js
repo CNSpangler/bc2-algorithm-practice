@@ -13,7 +13,6 @@ Return the array of the total number of cookies sold per hour for all of the sto
 ------------------------------------------------------------------------------------------------ */
 
 export const grandTotal = (stores) => {
-    const result = [];
     let nine = 0;
     let ten = 0;
     let eleven = 0;
@@ -43,14 +42,6 @@ export const grandTotal = (stores) => {
     });
     return [nine, ten, eleven, twelve, one, two, three, four, five, six, seven, eight];
 };
-
-
-
-
-
-
-
-
 
 // export const grandTotal = (stores) => {
 //     const newArr = [];
@@ -128,8 +119,13 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
+// hours = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.']
+// data = [88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]
+
 export const salesData = (hours, data) => {
-  // Solution code here...
+    hours.reduce((acc, curr) => {
+
+    }, { sales: 0 });
 };
 
 /* ------------------------------------------------------------------------------------------------
