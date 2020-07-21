@@ -96,13 +96,6 @@ export const standardizePhoneNumbers = (arr) => {
             .trim();
     });
 
-
-
-
-
-
-
-  
     // const newPhones = arr.map(phone => {
     //     const removeOpenParen = phone.replace('(', '');
     //     const removeCloseParen = removeOpenParen.replace(')', '');
@@ -119,6 +112,14 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
+export const onlyOddChars = (string) => {
+    let result = [];
+    for(let i = 0; i < string.length; i++) {
+        string.indexOf(string[i]) % 2 === 0 ? false : result.push(string[i]);
+    }
+    return result.join('');
+};
+
 // export const onlyOddChars = (str) => {
 //     let result;
 //     for(let i = 0; i < str.length; i++) {
@@ -131,16 +132,16 @@ For example, 'abcdefg' returns 'bdf'
 //     return result;
 // };
 
-export const onlyOddChars = (str) => {
-    let result;
-    for(let i = 0; i < str.length; i++) {
-        // console.log(str.indexOf(str[i]));
-        if((str.indexOf(str[i]) % 2) !== 0) {
-            result = str.slice(str.indexOf(str[i]), (str.indexOf(str[i + 1])));
-        }
-        return result;
-    }
-};
+// export const onlyOddChars = (str) => {
+//     let result;
+//     for(let i = 0; i < str.length; i++) {
+//         // console.log(str.indexOf(str[i]));
+//         if((str.indexOf(str[i]) % 2) !== 0) {
+//             result = str.slice(str.indexOf(str[i]), (str.indexOf(str[i + 1])));
+//         }
+//         return result;
+//     }
+// };
 
 
 

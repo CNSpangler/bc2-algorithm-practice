@@ -50,7 +50,7 @@ test('It should return a standardized set of phone numbers', assert => {
     assert.deepEqual(standardizePhoneNumbers([nums[0]]), ['1234567890']);
 });
 
-skip('It should only return the odd indexed characters from the string', assert => {
+test('It should only return the odd indexed characters from the string', assert => {
     assert.equal(onlyOddChars('0123456789'), '13579');
     assert.equal(onlyOddChars('abcd'), 'bd');
     assert.equal(onlyOddChars('a'), '');
