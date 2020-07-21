@@ -87,13 +87,29 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 export const standardizePhoneNumbers = (arr) => {
-    const newPhones = arr.map(phone => {
-        const removeOpenParen = phone.replace('(', '');
-        const removeCloseParen = removeOpenParen.replace(')', '');
-        const removeDash = removeCloseParen.replace('-', '');
-        return removeDash.replace(' ', '');
+    return arr.map(string => {
+        return string
+            .replace('(', '')
+            .replace(')', '')
+            .replace('-', '')
+            .replace(' ', '')
+            .trim();
     });
-    return newPhones;
+
+
+
+
+
+
+
+  
+    // const newPhones = arr.map(phone => {
+    //     const removeOpenParen = phone.replace('(', '');
+    //     const removeCloseParen = removeOpenParen.replace(')', '');
+    //     const removeDash = removeCloseParen.replace('-', '');
+    //     return removeDash.replace(' ', '');
+    // });
+    // return newPhones;
 };
 
 /* ------------------------------------------------------------------------------------------------
