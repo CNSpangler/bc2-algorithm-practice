@@ -57,7 +57,7 @@ test('It should only return the odd indexed characters from the string', assert 
     assert.equal(onlyOddChars(''), '');
 });
 
-skip('It should correctly assess whether all the strings are happy', assert => {
+test('It should correctly assess whether all the strings are happy', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.equal(allHappy(words), false);

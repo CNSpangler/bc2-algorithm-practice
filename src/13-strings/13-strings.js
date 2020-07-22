@@ -154,7 +154,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 export const allHappy = (arr) => {
-  // Solution code here...
+    const boolArr = arr.map(string => string.includes(':)'));
+    return boolArr.includes(false) ? false : true;
 };
 
 /* ------------------------------------------------------------------------------------------------
