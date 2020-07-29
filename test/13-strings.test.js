@@ -65,7 +65,7 @@ test('It should correctly assess whether all the strings are happy', assert => {
     assert.equal(allHappy([]), true);
 });
 
-skip('It should find all the strings that contain a given string', assert => {
+test('It should find all the strings that contain a given string', assert => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
     assert.deepEqual(findAnything(words, ':)'), findHappiness(words));
