@@ -175,6 +175,17 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 export const findEvery = (arr, target) => {
+    const boolArr = arr.map(string => {
+        return string.includes(target)
+            ? true
+            : false;
+    });
+
+    console.log(boolArr);
+
+    return boolArr.includes(false)
+        ? false
+        : true;
 };
 
 /* ------------------------------------------------------------------------------------------------

@@ -72,7 +72,7 @@ test('It should find all the strings that contain a given string', assert => {
     assert.deepEqual(findAnything(words, 'i'), ['things', 'missing that thing']);
 });
 
-skip('It should determine whether all the strings contain a given string', assert => {
+test('It should determine whether all the strings contain a given string', assert => {
     const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
 
     assert.equal(findEvery(words, 'a'), false);
