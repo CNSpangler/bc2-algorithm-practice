@@ -180,9 +180,7 @@ export const findEvery = (arr, target) => {
             ? true
             : false;
     });
-
-    console.log(boolArr);
-
+    
     return boolArr.includes(false)
         ? false
         : true;
@@ -201,7 +199,13 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 export const unenrollBrook = (arr) => {
-  // Solution code here...
+  // iterate through top level arr
+  // iterate through each lower arr
+    //for each string, see if it contains "Brook"
+    //if so, splice it from arr
+  //return orig arr
+
+    
 };
 
 /* ------------------------------------------------------------------------------------------------

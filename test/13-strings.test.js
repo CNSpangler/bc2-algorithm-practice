@@ -80,7 +80,7 @@ test('It should determine whether all the strings contain a given string', asser
     assert.equal(findEvery(words, 'i'), true);
 });
 
-skip('It should remove Brook from all courses', assert => {
+test('It should remove Brook from all courses', assert => {
     const roster = [
         ['Michelle', 'Allie', 'Brook TESTING'],
         ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],
