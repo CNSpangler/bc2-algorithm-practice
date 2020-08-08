@@ -205,7 +205,10 @@ export const unenrollBrook = (arr) => {
     //if so, splice it from arr
   //return orig arr
 
-    
+    return arr.map(lowArr => {
+        console.log(lowArr);
+        return lowArr.filter(string => !string.includes('Brook'));
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
