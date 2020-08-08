@@ -199,14 +199,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 export const unenrollBrook = (arr) => {
-  // iterate through top level arr
-  // iterate through each lower arr
-    //for each string, see if it contains "Brook"
-    //if so, splice it from arr
-  //return orig arr
-
     return arr.map(lowArr => {
-        console.log(lowArr);
         return lowArr.filter(string => !string.includes('Brook'));
     });
 };
