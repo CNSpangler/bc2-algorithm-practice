@@ -250,5 +250,9 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 export const characterByIndex = (arr) => {
-  // Solution code here...
+    const result = [];
+    for(let i = 0; i < arr.length; i++) {
+        result.push(arr[i][i]);
+    }
+    return result;
 };

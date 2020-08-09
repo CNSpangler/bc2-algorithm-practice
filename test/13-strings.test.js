@@ -137,7 +137,7 @@ test('It should sort events by the day on which they happen', assert => {
     assert.deepEqual(sortedEvents2[6], []);
 });
 
-skip('It should return the ith character of the ith string', assert => {
+test('It should return the ith character of the ith string', assert => {
     const words = ['apple', 'banana', 'cantaloupe'];
 
     assert.deepEqual(characterByIndex(words), ['a', 'a', 'n']);
