@@ -101,7 +101,7 @@ test('It should remove Brook from all courses', assert => {
     assert.deepEqual(unenrollBrook([]), []);
 });
 
-skip('It should sort events by the day on which they happen', assert => {
+test('It should sort events by the day on which they happen', assert => {
     const events = [
         'Dancing on Mondays and Tuesdays', 
         'Meet the inventors! Monday, August 7', 

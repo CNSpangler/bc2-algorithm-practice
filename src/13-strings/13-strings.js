@@ -228,7 +228,17 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 export const sortByDay = (arr) => {
-  // Solution code here...
+    console.log(arr);
+
+    const Monday = arr.filter(string => string.includes('Monday'));
+    const Tuesday = arr.filter(string => string.includes('Tuesday'));
+    const Wednesday = arr.filter(string => string.includes('Wednesday'));
+    const Thursday = arr.filter(string => string.includes('Thursday'));
+    const Friday = arr.filter(string => string.includes('Friday'));
+    const Saturday = arr.filter(string => string.includes('Saturday'));
+    const Sunday = arr.filter(string => string.includes('Sunday'));
+
+    return [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday];
 };
 
 /* ------------------------------------------------------------------------------------------------
