@@ -61,13 +61,35 @@ For example, "Lando Calrisian - Boba Fett - Princess Amidala".
 ------------------------------------------------------------------------------------------------ */
 
 export const biggerThanLuke = (arr) => {
-    const result = [];
-    arr.forEach(char => {
-        if(char.mass > 77) {
-            result.push(char.name + ` - `);
-        }
-    });
-    return result.toString();
+// handle behavior if it receives empty array
+    if(arr.length === 0) {
+        return '';
+    } else {
+        const luke = arr.find(item => item.name.includes('Luke'));
+        const lukeMass = Number(luke.mass);
+    
+        return arr
+            .filter(char => Number(char.mass) > lukeMass)
+            .map(bigChar => bigChar.name)
+            .join(' - ');
+    }
+
+
+
+
+
+
+
+
+
+
+    // const result = [];
+    // arr.forEach(char => {
+    //     if(char.mass > 77) {
+    //         result.push(char.name + ` - `);
+    //     }
+    // });
+    // return result.toString();
 };
 
 /* ------------------------------------------------------------------------------------------------

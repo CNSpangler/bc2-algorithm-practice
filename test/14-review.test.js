@@ -23,8 +23,8 @@ Run your tests from the browser using live-server, or console via: npm test
 
 
 test('It should convert each word to title case', assert => {
-    const words = ['apple', 'banana', 'MacGyver'];
-    assert.deepEqual(toTitleCase(words), ['Apple', 'Banana', 'MacGyver']);
+    const words = ['apple', 'banana', 'MacGyver', 'excel'];
+    assert.deepEqual(toTitleCase(words), ['Apple', 'Banana', 'MacGyver', 'Excel']);
     assert.deepEqual(toTitleCase([]), []);
 });
 
@@ -90,12 +90,12 @@ const starWarsData = [{
     gender: 'n/a'
 }];
 
-skip('It should return only characters that are bigger than Luke', assert => {
+test('It should return only characters that are bigger than Luke', assert => {
     assert.equal(biggerThanLuke(starWarsData), 'Darth Vader - Pex Kylar');
     assert.equal(biggerThanLuke([]), '');
 });
 
-test('It should sort items by a price', assert => {
+skip('It should sort items by a price', assert => {
 
     assert.deepEqual(sortBy('price', [
         { name: 'Sweatshirt', price: 45 },
