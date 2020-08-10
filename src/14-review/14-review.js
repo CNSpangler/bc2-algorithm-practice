@@ -46,7 +46,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 export const toTitleCase = (arr) => {
     return arr.map(item => {
-        item[0].replace(toUpperCase(item[0]));
+        return item.replace(item[0], item[0].toUpperCase());
     });
 };
 
