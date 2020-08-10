@@ -158,12 +158,34 @@ Your function does not need to work for boards of any size other than 3x3.
 
 Here is a sample board:
 [
-  ['X', '', 'O'],
-  ['X', 'O', ''],
-  ['X', 'O', 'X'],
+    ['X', '', 'O'],
+    ['X', 'O', ''],
+    ['X', 'O', 'X'],
 ];
 ------------------------------------------------------------------------------------------------ */
 
 export const detectTicTacToeWin = (board) => {
-  // Solution code here...
+    // get rows
+    // get columns
+    // get diagonals
+    // put all trios into a single array
+    // check the array
+        // any trio w empty string returns false
+        // if trio.every(trio[0]), return true
+        // else return false
+    // if the array.includes(false) return false
+
+    let divBoard = [...board];
+
+    const boolArr = divBoard.map(arr => {
+        if(arr.includes('')) {
+            return false;
+        } else if(arr.every(arr[0])) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    return boolArr.includes(true);
 };
