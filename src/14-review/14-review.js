@@ -104,19 +104,28 @@ export const sortBy = (property, arr) => {
     // arr.map(item => console.log(item[property]));
     // arr.sort((a, b) => a[property] - b[property]);
 
-    function compare(a, b) {
-        if(a[property] < b[property]) {
-            return -1;
-        }
-        if(a[property] > b[property]) {
-            return 1;
-        }
-        return 0;
-    }
+    // function compare(a, b) {
+    //     if(a[property] < b[property]) {
+    //         return -1;
+    //     }
+    //     if(a[property] > b[property]) {
+    //         return 1;
+    //     }
+    //     return 0;
+    // }
 
-    return arr.sort(function compare(a, b) {
-        return a[property] - b[property];
-    });
+    // return arr.sort(function compare(a, b) {
+    //     return a[property] - b[property];
+    // // });
+
+    // arr.sort((a, b) => (a[property] > b[property]) 
+    //     ? 1 
+    //     : (a[property] === b[property]) 
+    //         ? 0 
+    //         : -1
+    // );
+
+    return arr.sort((a, b) => (a[property] > b[property]) ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
