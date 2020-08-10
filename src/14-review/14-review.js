@@ -74,15 +74,6 @@ export const biggerThanLuke = (arr) => {
             .join(' - ');
     }
 
-
-
-
-
-
-
-
-
-
     // const result = [];
     // arr.forEach(char => {
     //     if(char.mass > 77) {
@@ -98,27 +89,33 @@ Write a function named sortBy that takes in an array of objects, each of which h
 
 Here is an example of the input:
 [
-  {name: 'Sweatshirt', price: 45},
-  {name: 'Bookmark', price: 2.50},
-  {name: 'Tote bag', price: 15}
+    {name: 'Sweatshirt', price: 45},
+    {name: 'Bookmark', price: 2.50},
+    {name: 'Tote bag', price: 15}
 ];
 
 This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 export const sortBy = (property, arr) => {
+    // console.log(arr[0][property]);
+    // // typeof(arr[0][property]) === String
+    //     // ? arr.sort((a, b) => a[property] - b[property])
+    // arr.map(item => console.log(item[property]));
+    // arr.sort((a, b) => a[property] - b[property]);
+
     function compare(a, b) {
-        if(a.property < b.property) {
+        if(a[property] < b[property]) {
             return -1;
         }
-        if(a.property > b.property) {
+        if(a[property] > b[property]) {
             return 1;
         }
         return 0;
     }
 
-    arr.sort(function compare(a, b) {
-        return a.property - b.property;
+    return arr.sort(function compare(a, b) {
+        return a[property] - b[property];
     });
 };
 

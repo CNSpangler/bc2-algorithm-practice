@@ -95,7 +95,7 @@ test('It should return only characters that are bigger than Luke', assert => {
     assert.equal(biggerThanLuke([]), '');
 });
 
-skip('It should sort items by a price', assert => {
+test('It should sort items by a price', assert => {
 
     assert.deepEqual(sortBy('price', [
         { name: 'Sweatshirt', price: 45 },
@@ -109,7 +109,7 @@ skip('It should sort items by a price', assert => {
 
 });
 
-skip('It should sort items by name', assert => {
+test('It should sort items by name', assert => {
 
     assert.deepEqual(sortBy('name', [
         { name: 'Sweatshirt', price: 45 },
