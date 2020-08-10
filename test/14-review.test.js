@@ -122,7 +122,7 @@ test('It should sort items by name', assert => {
     ]);
 });
 
-skip('It should check if url is https', assert => {
+test('It should check if url is https', assert => {
     assert.equal(isSecure('http://www.insecure.com'), false);
     assert.equal(isSecure('https://secure.com'), true);
     assert.equal(isSecure('https:/missingslash.org'), false);

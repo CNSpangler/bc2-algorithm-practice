@@ -142,7 +142,7 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 
 export const isSecure = (url) => { 
-// Solution code here...
+    return url.match(/^https:\/\//) !== null ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
