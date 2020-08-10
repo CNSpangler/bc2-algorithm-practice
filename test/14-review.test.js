@@ -22,7 +22,7 @@ Run your tests from the browser using live-server, or console via: npm test
 ------------------------------------------------------------------------------------------------ */
 
 
-skip('It should convert each word to title case', assert => {
+test('It should convert each word to title case', assert => {
     const words = ['apple', 'banana', 'MacGyver'];
     assert.deepEqual(toTitleCase(words), ['Apple', 'Banana', 'MacGyver']);
     assert.deepEqual(toTitleCase([]), []);

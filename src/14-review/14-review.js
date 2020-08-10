@@ -9,6 +9,10 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 // export const toTitleCase = (arr) => {
+//     arr.map(word => toTitleCase(word));
+// };
+
+// export const toTitleCase = (arr) => {
 //     arr.map(item => item.toUpperCase);
 // };
 
@@ -41,8 +45,8 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 // };
 
 export const toTitleCase = (arr) => {
-    arr.map(item => {
-        item[0].replace(item[0].toUpperCase());
+    return arr.map(item => {
+        item[0].replace(toUpperCase(item[0]));
     });
 };
 
