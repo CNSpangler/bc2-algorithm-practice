@@ -165,22 +165,22 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 export const detectTicTacToeWin = (board) => {
-    // get rows
-    // get columns
     // get diagonals
     // put all trios into a single array
-    // check the array
-        // any trio w empty string returns false
-        // if trio.every(trio[0]), return true
-        // else return false
-    // if the array.includes(false) return false
 
     let divBoard = [...board];
+
+    divBoard.push(
+        [board[0][0], board [1][0], board[2][0]], 
+        [board[0][1], board [1][1], board[2][1]], 
+        [board[0][2], board [1][2], board[2][2]], 
+        [board[0][0], board [1][1], board[2][2]],
+        [board[0][2], board [1][1], board[2][0]]);
 
     const boolArr = divBoard.map(arr => {
         if(arr.includes('')) {
             return false;
-        } else if(arr.every(arr[0])) {
+        } else if(arr.every(item => item === arr[0])) {
             return true;
         } else {
             return false;

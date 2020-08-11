@@ -128,7 +128,7 @@ test('It should check if url is https', assert => {
     assert.equal(isSecure('https:/missingslash.org'), false);
 });
 
-skip('It should return true if there are three in a row', assert => {
+test('It should return true if there are three in a row', assert => {
     assert.equal(
         detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']]), 
         true
@@ -139,14 +139,14 @@ skip('It should return true if there are three in a row', assert => {
     );
 });
 
-skip('It should return false if there are not three in a row', assert => {
+test('It should return false if there are not three in a row', assert => {
     assert.deepEqual(
         detectTicTacToeWin([['X', '', 'O'], ['O', 'O', ''], ['X', 'O', 'X']]), 
         false
     );
 });
 
-skip('It should not treat empty 3 in row as winner', assert => {
+test('It should not treat empty 3 in row as winner', assert => {
     assert.deepEqual(
         detectTicTacToeWin([['', '', ''], ['O', 'O', ''], ['X', 'O', 'X']]),
         false
